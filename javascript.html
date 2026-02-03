@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Learning Hub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Web Dev Hub</h1>
+            <nav class="nav">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="theme-switcher">
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="neon">Neon</option>
+                    <option value="minimal">Minimal</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#syntax">Syntax</a></li>
+                <li><a href="#concepts">Core Concepts</a></li>
+                <li><a href="#roadmap">Learning Roadmap</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#mistakes">Common Mistakes</a></li>
+                <li><a href="#quiz">Mini Quiz</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="introduction" class="content-section reveal">
+                <h2>JavaScript Introduction</h2>
+                <p>JavaScript is the programming language of the web. It enables dynamic interactivity and complex functionality in web applications.</p>
+                <div class="card">
+                    <h3>What is JavaScript?</h3>
+                    <p>JavaScript is a high-level, interpreted programming language that runs in browsers and can also be used server-side with Node.js.</p>
+                </div>
+            </section>
+
+            <section id="syntax" class="content-section reveal">
+                <h2>JavaScript Syntax</h2>
+                <div class="card">
+                    <h3>Variables and Functions</h3>
+                    <div class="code-block">
+                        <pre><code>// Variables
+let name = "John";
+const age = 25;
+
+// Function
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Arrow function
+const add = (a, b) => a + b;</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="concepts" class="content-section reveal">
+                <h2>Core Concepts</h2>
+                <div class="card">
+                    <h3>Data Types</h3>
+                    <p>Numbers, strings, booleans, objects, arrays, null, undefined, symbols.</p>
+                </div>
+                <div class="card">
+                    <h3>DOM Manipulation</h3>
+                    <p>Interacting with HTML elements using document methods.</p>
+                </div>
+                <div class="card">
+                    <h3>Async JavaScript</h3>
+                    <p>Promises, async/await for handling asynchronous operations.</p>
+                </div>
+                <div class="card">
+                    <h3>ES6+ Features</h3>
+                    <p>Modern JavaScript features like destructuring, spread operator, modules.</p>
+                </div>
+            </section>
+
+            <section id="roadmap" class="content-section reveal">
+                <h2>JavaScript Learning Roadmap</h2>
+                <div class="roadmap">
+                    <div class="roadmap-diagram">
+                        <!-- Level 1: Fundamentals -->
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">1</div>
+                            <div class="roadmap-node beginner">
+                                <div>JS Fundamentals</div>
+                                <div class="roadmap-duration">4 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Variables, data types, operators
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Variables</span>
+                                    <span class="roadmap-skill">Data Types</span>
+                                    <span class="roadmap-skill">Operators</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node beginner">
+                                <div>Control Flow</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Conditionals, loops, switch
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">If/Else</span>
+                                    <span class="roadmap-skill">Loops</span>
+                                    <span class="roadmap-skill">Switch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 2: Functions & Arrays -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">2</div>
+                            <div class="roadmap-node intermediate">
+                                <div>Functions & Scope</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Functions, closures, scope, this
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Functions</span>
+                                    <span class="roadmap-skill">Closures</span>
+                                    <span class="roadmap-skill">Scope</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node intermediate">
+                                <div>Arrays & Objects</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Array methods, object manipulation
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Arrays</span>
+                                    <span class="roadmap-skill">Objects</span>
+                                    <span class="roadmap-skill">Methods</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 3: DOM & Events -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">3</div>
+                            <div class="roadmap-node advanced">
+                                <div>DOM Manipulation</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Selectors, event handling, traversal
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">DOM</span>
+                                    <span class="roadmap-skill">Events</span>
+                                    <span class="roadmap-skill">Traversal</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node advanced">
+                                <div>Async JavaScript</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Callbacks, promises, async/await
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Promises</span>
+                                    <span class="roadmap-skill">Async/Await</span>
+                                    <span class="roadmap-skill">Fetch API</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 4: Advanced & Modern JS -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">4</div>
+                            <div class="roadmap-node expert">
+                                <div>ES6+ Features</div>
+                                <div class="roadmap-duration">4 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Destructuring, modules, generators
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Destructuring</span>
+                                    <span class="roadmap-skill">Modules</span>
+                                    <span class="roadmap-skill">Generators</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node expert">
+                                <div>JS Ecosystem</div>
+                                <div class="roadmap-duration">4 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Node.js, frameworks, tools
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Node.js</span>
+                                    <span class="roadmap-skill">React/Vue</span>
+                                    <span class="roadmap-skill">Build Tools</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="examples" class="content-section reveal">
+                <h2>Examples</h2>
+                <div class="card">
+                    <h3>DOM Manipulation</h3>
+                    <div class="code-block">
+                        <pre><code>// Get element
+const button = document.getElementById('myButton');
+
+// Add event listener
+button.addEventListener('click', function() {
+    // Change content
+    document.querySelector('.message').textContent = 'Button clicked!';
+    
+    // Add class
+    button.classList.add('active');
+});</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mistakes" class="content-section reveal">
+                <h2>Common Mistakes</h2>
+                <div class="card">
+                    <h3>Var vs Let/Const</h3>
+                    <p>Use let and const instead of var to avoid scope issues.</p>
+                </div>
+                <div class="card">
+                    <h3>Async Issues</h3>
+                    <p>Understanding promises and async/await prevents callback hell.</p>
+                </div>
+                <div class="card">
+                    <h3>Type Coercion</h3>
+                    <p>Be aware of automatic type conversion in JavaScript.</p>
+                </div>
+            </section>
+
+            <section id="quiz" class="content-section reveal">
+                <h2>Mini Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h3>Which keyword declares a constant variable?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="a"> var</label>
+                            <label><input type="radio" name="q1" value="b"> let</label>
+                            <label><input type="radio" name="q1" value="c"> const</label>
+                        </div>
+                        <button class="quiz-check">Check Answer</button>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright">
+                © <span id="currentYear">2024</span> Web Dev Hub. All rights reserved. Built with passion for web developers.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>

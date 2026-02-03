@@ -1,0 +1,77 @@
+{
+  "html": {
+    "topics": [
+      {
+        "id": "basic-structure",
+        "title": "Basic Structure",
+        "content": "Every HTML document should start with DOCTYPE and have proper head and body sections.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n</head>\n<body>\n    <!-- Content goes here -->\n</body>\n</html>",
+        "tags": ["basics", "structure", "doctype"]
+      },
+      {
+        "id": "common-tags",
+        "title": "Common Tags",
+        "content": "These are the most frequently used HTML tags for structuring content.",
+        "code": "<h1>Heading 1</h1>\n<p>Paragraph text</p>\n<a href=\"#\">Link</a>\n<img src=\"image.jpg\" alt=\"Description\">\n<div>Container</div>\n<span>Inline element</span>\n<ul>Unordered list</ul>\n<ol>Ordered list</ol>",
+        "tags": ["tags", "elements", "structure"]
+      },
+      {
+        "id": "forms",
+        "title": "Forms",
+        "content": "Forms use various input types and require proper labels for accessibility.",
+        "code": "<form action=\"/submit\" method=\"post\">\n    <label for=\"name\">Name:</label>\n    <input type=\"text\" id=\"name\" name=\"name\" required>\n    \n    <label for=\"email\">Email:</label>\n    <input type=\"email\" id=\"email\" name=\"email\" required>\n    \n    <label for=\"message\">Message:</label>\n    <textarea id=\"message\" name=\"message\"></textarea>\n    \n    <button type=\"submit\">Submit</button>\n</form>",
+        "tags": ["forms", "input", "validation"]
+      }
+    ]
+  },
+  "css": {
+    "topics": [
+      {
+        "id": "selectors",
+        "title": "Selectors",
+        "content": "CSS selectors target HTML elements to apply styles.",
+        "code": "/* Element selector */\np { color: blue; }\n\n/* Class selector */\n.highlight { background: yellow; }\n\n/* ID selector */\n#header { font-size: 24px; }\n\n/* Descendant selector */\ndiv p { margin: 10px; }\n\n/* Attribute selector */\ninput[type=\"text\"] { border: 1px solid #ccc; }\n\n/* Pseudo-class */\na:hover { color: red; }",
+        "tags": ["selectors", "styling", "targeting"]
+      },
+      {
+        "id": "flexbox",
+        "title": "Flexbox",
+        "content": "Flexbox provides powerful layout capabilities for one-dimensional arrangements.",
+        "code": ".container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: row;\n    flex-wrap: wrap;\n    gap: 20px;\n}\n\n.item {\n    flex: 1 1 200px;\n    align-self: flex-start;\n}",
+        "tags": ["layout", "flexbox", "responsive"]
+      },
+      {
+        "id": "grid",
+        "title": "Grid Layout",
+        "content": "CSS Grid is perfect for two-dimensional layouts with complex structures.",
+        "code": ".grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-template-rows: auto;\n    gap: 20px;\n    grid-template-areas: \n        \"header header header\"\n        \"sidebar main main\"\n        \"footer footer footer\";\n}",
+        "tags": ["grid", "layout", "responsive"]
+      }
+    ]
+  },
+  "javascript": {
+    "topics": [
+      {
+        "id": "variables-data-types",
+        "title": "Variables and Data Types",
+        "content": "JavaScript has dynamic typing with several primitive and reference types.",
+        "code": "// Variables\nlet name = \"John\";\nconst age = 25;\nvar city = \"New York\";\n\n// Data types\nlet number = 42;\nlet string = \"Hello\";\nlet boolean = true;\nlet array = [1, 2, 3];\nlet object = { key: \"value\" };\nlet nullValue = null;\nlet undefinedValue = undefined;",
+        "tags": ["variables", "data-types", "basics"]
+      },
+      {
+        "id": "functions",
+        "title": "Functions",
+        "content": "Functions are first-class citizens in JavaScript with multiple declaration styles.",
+        "code": "// Function declaration\nfunction greet(name) {\n    return `Hello, ${name}!`;\n}\n\n// Function expression\nconst add = function(a, b) {\n    return a + b;\n};\n\n// Arrow function\nconst multiply = (a, b) => a * b;",
+        "tags": ["functions", "arrow-functions", "declarations"]
+      },
+      {
+        "id": "dom-manipulation",
+        "title": "DOM Manipulation",
+        "content": "DOM manipulation allows dynamic interaction with HTML elements.",
+        "code": "// Select elements\nconst element = document.getElementById('myId');\nconst elements = document.querySelectorAll('.myClass');\n\n// Modify content\nelement.textContent = 'New text';\nelement.innerHTML = '<strong>Bold text</strong>';\n\n// Modify styles\nelement.style.color = 'red';\nelement.classList.add('active');\n\nelement.addEventListener('click', function() {\n    console.log('Element clicked!');\n});",
+        "tags": ["dom", "events", "manipulation"]
+      }
+    ]
+  }
+}

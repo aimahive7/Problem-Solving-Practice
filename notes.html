@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Notes</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Web Dev Hub</h1>
+            <nav class="nav">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="theme-switcher">
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="neon">Neon</option>
+                    <option value="minimal">Minimal</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Topics</h3>
+            <ul>
+                <li><a href="#html-notes">HTML Notes</a></li>
+                <li><a href="#css-notes">CSS Notes</a></li>
+                <li><a href="#javascript-notes">JavaScript Notes</a></li>
+                <li><a href="#git-notes">Git Notes</a></li>
+                <li><a href="#web-concepts-notes">Web Concepts</a></li>
+                <li><a href="#roadmap" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">🗺️ Learning Roadmaps</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="html-notes" class="content-section">
+                <h2>HTML Notes</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Basic Structure</h3>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="code-block">
+                                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p>Every HTML document should start with DOCTYPE and have proper head and body sections.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Common Tags</h3>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="code-block">
+                                <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;p&gt;Paragraph text&lt;/p&gt;
+&lt;a href="#"&gt;Link&lt;/a&gt;
+&lt;img src="image.jpg" alt="Description"&gt;
+&lt;div&gt;Container&lt;/div&gt;
+&lt;span&gt;Inline element&lt;/span&gt;
+&lt;ul&gt;Unordered list&lt;/ul&gt;
+&lt;ol&gt;Ordered list&lt;/ol&gt;</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p>These are the most frequently used HTML tags for structuring content.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Forms</h3>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="code-block">
+                                <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+    
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p>Forms use various input types and require proper labels for accessibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="css-notes" class="content-section">
+                <h2>CSS Notes</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Selectors</h3>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="code-block">
+                                <pre><code>/* Element selector */
+p { color: blue; }
+
+/* Class selector */
+.highlight { background: yellow; }
+
+/* ID selector */
+#header { font-size: 24px; }
+
+/* Descendant selector */
+div p { margin: 10px; }
+
+/* Attribute selector */
+input[type="text"] { border: 1px solid #ccc; }
+
+/* Pseudo-class */
+a:hover { color: red; }</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p>CSS selectors target HTML elements to apply styles.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Flexbox</h3>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="code-block">
+                                <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    flex: 1 1 200px;
+    align-self: flex-start;
+}</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p>Flexbox provides powerful layout capabilities for one-dimensional arrangements.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Grid Layout</h3>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="code-block">
+                                <pre><code>.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+}</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p>CSS Grid is perfect for two-dimensional layouts with complex structures.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="javascript-notes" class="content-section">
+                <h2>JavaScript Notes</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Variables and Data Types</h3>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="code-block">
+                                <pre><code>// Variables
+let name = "John";
+const age = 25;
+var city = "New York";
+
+// Data types
+let number = 42;
+let string = "Hello";
+let boolean = true;
+let array = [1, 2, 3];
+let object = { key: "value" };
+let nullValue = null;
+let undefinedValue = undefined;</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p>JavaScript has dynamic typing with several primitive and reference types.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Functions</h3>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="code-block">
+                                <pre><code>// Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Function expression
+const add = function(a, b) {
+    return a + b;
+};
+
+// Arrow function
+const multiply = (a, b) => a * b;
+
+// Arrow function with multiple lines
+const calculate = (a, b, operation) => {
+    if (operation === 'add') {
+        return a + b;
+    } else if (operation === 'multiply') {
+        return a * b;
+    }
+};</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p>Functions are first-class citizens in JavaScript with multiple declaration styles.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>DOM Manipulation</h3>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="code-block">
+                                <pre><code>// Select elements
+const element = document.getElementById('myId');
+const elements = document.querySelectorAll('.myClass');
+
+// Modify content
+element.textContent = 'New text';
+element.innerHTML = '&lt;strong&gt;Bold text&lt;/strong&gt;';
+
+// Modify styles
+element.style.color = 'red';
+element.classList.add('active');
+element.classList.remove('hidden');
+
+// Event listeners
+element.addEventListener('click', function() {
+    console.log('Element clicked!');
+});
+
+// Create elements
+const newDiv = document.createElement('div');
+newDiv.textContent = 'New element';
+document.body.appendChild(newDiv);</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p>DOM manipulation allows dynamic interaction with HTML elements.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </section>
+
+            <!-- References Section -->
+            <section class="references-section">
+                <div class="references-header">
+                    <h2 class="references-title">Learning Resources & References</h2>
+                    <div class="language-filter">
+                        <button class="filter-btn active" data-language="all">All</button>
+                        <button class="filter-btn" data-language="html">HTML</button>
+                        <button class="filter-btn" data-language="css">CSS</button>
+                        <button class="filter-btn" data-language="javascript">JavaScript</button>
+                        <button class="filter-btn" data-language="git">Git</button>
+                        <button class="filter-btn" data-language="web">Web Concepts</button>
+                    </div>
+                </div>
+
+                <div class="references-grid">
+                    <!-- HTML References -->
+                    <div class="reference-card" data-language="html">
+                        <span class="reference-language">HTML</span>
+                        <h3 class="reference-title">MDN Web Docs - HTML</h3>
+                        <p class="reference-description">Comprehensive documentation covering all HTML elements, attributes, and best practices.</p>
+                        <div class="reference-links">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">📖</span>
+                                Official Documentation
+                            </a>
+                            <a href="https://html.spec.whatwg.org/" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">📋</span>
+                                HTML Specification
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CSS References -->
+                    <div class="reference-card" data-language="css">
+                        <span class="reference-language">CSS</span>
+                        <h3 class="reference-title">MDN Web Docs - CSS</h3>
+                        <p class="reference-description">Complete guide to CSS properties, selectors, layout systems, and animations.</p>
+                        <div class="reference-links">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">📖</span>
+                                Official Documentation
+                            </a>
+                            <a href="https://css-tricks.com/" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">🎨</span>
+                                CSS-Tricks
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript References -->
+                    <div class="reference-card" data-language="javascript">
+                        <span class="reference-language">JavaScript</span>
+                        <h3 class="reference-title">JavaScript.info</h3>
+                        <p class="reference-description">Modern JavaScript tutorial from basics to advanced topics with examples.</p>
+                        <div class="reference-links">
+                            <a href="https://javascript.info/" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">⚡</span>
+                                Learning Platform
+                            </a>
+                            <a href="https://eloquentjavascript.net/" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">📚</span>
+                                Eloquent JavaScript
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Git References -->
+                    <div class="reference-card" data-language="git">
+                        <span class="reference-language">Git</span>
+                        <h3 class="reference-title">Pro Git Book</h3>
+                        <p class="reference-description">Comprehensive Git guide from basics to advanced workflows and best practices.</p>
+                        <div class="reference-links">
+                            <a href="https://git-scm.com/book" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">📕</span>
+                                Official Book
+                            </a>
+                            <a href="https://www.atlassian.com/git/tutorials/" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">🎯</span>
+                                Atlassian Git Tutorial
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Web Concepts References -->
+                    <div class="reference-card" data-language="web">
+                        <span class="reference-language">Web Concepts</span>
+                        <h3 class="reference-title">Web.dev</h3>
+                        <p class="reference-description">Modern web development guidance, best practices, and performance optimization.</p>
+                        <div class="reference-links">
+                            <a href="https://web.dev/" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">🌐</span>
+                                Learning Platform
+                            </a>
+                            <a href="https://httpwg.org/specs/" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">📡</span>
+                                HTTP Specifications
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Additional Tools -->
+                    <div class="reference-card" data-language="tools">
+                        <span class="reference-language">Tools</span>
+                        <h3 class="reference-title">Development Tools</h3>
+                        <p class="reference-description">Essential tools and resources for web development productivity.</p>
+                        <div class="reference-links">
+                            <a href="https://codepen.io/" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">✏️</span>
+                                CodePen
+                            </a>
+                            <a href="https://github.com/" target="_blank" class="reference-link">
+                                <span class="reference-link-icon">😺</span>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Recommendations -->
+                <div class="book-section">
+                    <h2 class="references-title">📚 Recommended Books</h2>
+                    <div class="book-grid">
+                        <!-- HTML Books -->
+                        <div class="book-card" data-category="html">
+                            <div class="book-cover">HTML</div>
+                            <div class="book-title">HTML & CSS: Design and Build Websites</div>
+                            <div class="book-author">Jon Duckett</div>
+                            <div class="book-rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star empty">⭐</span>
+                            </div>
+                        </div>
+
+                        <!-- CSS Books -->
+                        <div class="book-card" data-category="css">
+                            <div class="book-cover">CSS</div>
+                            <div class="book-title">CSS: The Definitive Guide</div>
+                            <div class="book-author">Eric A. Meyer</div>
+                            <div class="book-rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript Books -->
+                        <div class="book-card" data-category="javascript">
+                            <div class="book-cover">JS</div>
+                            <div class="book-title">JavaScript: The Good Parts</div>
+                            <div class="book-author">Douglas Crockford</div>
+                            <div class="book-rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star empty">⭐</span>
+                            </div>
+                        </div>
+
+                        <!-- More Books -->
+                        <div class="book-card" data-category="advanced">
+                            <div class="book-cover">📖</div>
+                            <div class="book-title">Clean Code</div>
+                            <div class="book-author">Robert C. Martin</div>
+                            <div class="book-rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                            </div>
+                        </div>
+
+                        <div class="book-card" data-category="design">
+                            <div class="book-cover">🎨</div>
+                            <div class="book-title">Don't Make Me Think</div>
+                            <div class="book-author">Steve Krug</div>
+                            <div class="book-rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                            </div>
+                        </div>
+
+                        <div class="book-card" data-category="performance">
+                            <div class="book-cover">⚡</div>
+                            <div class="book-title">High Performance Browser Networking</div>
+                            <div class="book-author">Ilya Grigorik</div>
+                            <div class="book-rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star empty">⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Suggestions -->
+                <div class="suggestion-box">
+                    <h3 class="suggestion-title">
+                        <span>🎯</span>
+                        Learning Path Suggestions
+                    </h3>
+                    <ul class="suggestion-list">
+                        <li>Start with HTML fundamentals, then move to CSS for styling</li>
+                        <li>Learn JavaScript basics before tackling frameworks</li>
+                        <li>Practice Git early in your learning journey</li>
+                        <li>Build real projects to solidify your knowledge</li>
+                        <li>Join developer communities for support and networking</li>
+                        <li>Follow industry blogs and stay updated with new technologies</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright">
+                © <span id="currentYear">2024</span> Web Dev Hub. All rights reserved. Built with passion for web developers.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>

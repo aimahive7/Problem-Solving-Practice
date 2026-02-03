@@ -1,0 +1,256 @@
+{
+  "html": [
+    {
+      "id": "html-css-difference",
+      "question": "What is the difference between HTML and HTML5?",
+      "answer": {
+        "content": "Key differences:",
+        "points": [
+          "Semantic Elements: HTML5 introduces semantic tags like <header>, <nav>, <main>, <article>, <section>, <aside>, <footer>",
+          "Multimedia Support: Native audio and video support with <audio> and <video> tags",
+          "Graphics: Canvas and SVG for graphics",
+          "Form Elements: New input types like email, date, number, range",
+          "API Support: LocalStorage, Geolocation, Web Workers"
+        ]
+      },
+      "difficulty": "Easy",
+      "category": "HTML",
+      "tags": ["html5", "basics", "differences"]
+    },
+    {
+      "id": "semantic-html",
+      "question": "What is semantic HTML and why is it important?",
+      "answer": {
+        "content": "Semantic HTML uses HTML elements according to their intended purpose.",
+        "importance": [
+          "SEO: Search engines better understand content structure",
+          "Accessibility: Screen readers can navigate content better",
+          "Maintainability: Code is more readable and maintainable",
+          "Developer Experience: Clear structure makes development easier"
+        ]
+      },
+      "difficulty": "Easy",
+      "category": "HTML",
+      "tags": ["semantic", "accessibility", "seo"]
+    },
+    {
+      "id": "doctype",
+      "question": "Explain the DOCTYPE declaration and its purpose.",
+      "answer": {
+        "content": "DOCTYPE: Document Type Declaration",
+        "points": [
+          "Purpose: Tells the browser which version of HTML the document uses",
+          "HTML5: <!DOCTYPE html> is the simplest declaration",
+          "Browser Mode: Ensures browser uses standards mode instead of quirks mode",
+          "Validation: Required for HTML validation"
+        ]
+      },
+      "difficulty": "Easy",
+      "category": "HTML",
+      "tags": ["doctype", "standards", "validation"]
+    }
+  ],
+  "css": [
+    {
+      "id": "box-model",
+      "question": "What is the CSS Box Model and how does it work?",
+      "answer": {
+        "content": "CSS Box Model describes how elements are rendered:",
+        "layers": [
+          "Content: Actual content (text, images)",
+          "Padding: Space between content and border",
+          "Border: Border around padding",
+          "Margin: Space outside the border"
+        ],
+        "boxSizing": {
+          "content-box": "Width/height apply only to content",
+          "border-box": "Width/height include padding and border"
+        }
+      },
+      "difficulty": "Medium",
+      "category": "CSS",
+      "tags": ["box-model", "layout", "fundamentals"]
+    },
+    {
+      "id": "flexbox-vs-grid",
+      "question": "Explain the difference between Flexbox and CSS Grid.",
+      "answer": {
+        "flexbox": {
+          "dimension": "One-dimensional layout (row or column)",
+          "useCase": "Navigation bars, card layouts, form alignment",
+          "alignment": "Excellent for content alignment and distribution"
+        },
+        "grid": {
+          "dimension": "Two-dimensional layout (rows and columns)",
+          "useCase": "Complex page layouts, dashboard designs",
+          "control": "Precise control over grid lines and areas"
+        },
+        "usage": "Can be used together - Grid for overall layout, Flexbox for component layout"
+      },
+      "difficulty": "Medium",
+      "category": "CSS",
+      "tags": ["layout", "flexbox", "grid", "comparison"]
+    },
+    {
+      "id": "specificity",
+      "question": "What is CSS specificity and how is it calculated?",
+      "answer": {
+        "content": "CSS Specificity determines which CSS rule applies when multiple rules match an element.",
+        "calculation": {
+          "order": "from highest to lowest",
+          "points": [
+            "Inline styles: 1000 points",
+            "ID selectors: 100 points each",
+            "Class selectors: 10 points each",
+            "Element selectors: 1 point each",
+            "Universal selector (*): 0 points"
+          ]
+        },
+        "important": "!important overrides specificity but should be avoided"
+      },
+      "difficulty": "Hard",
+      "category": "CSS",
+      "tags": ["specificity", "cascade", "selectors"]
+    }
+  ],
+  "javascript": [
+    {
+      "id": "closures",
+      "question": "Explain JavaScript closures with an example.",
+      "answer": {
+        "definition": "Closure: A function that has access to variables in its outer (enclosing) scope even after the outer function has returned.",
+        "example": "function createCounter() {\n    let count = 0;\n    \n    return function() {\n        count++;\n        return count;\n    };\n}\n\nconst counter = createCounter();\nconsole.log(counter()); // 1\nconsole.log(counter()); // 2\nconsole.log(counter()); // 3",
+        "useCases": ["Data privacy", "Function factories", "Event handlers"]
+      },
+      "difficulty": "Medium",
+      "category": "JavaScript",
+      "tags": ["closures", "scope", "functions"]
+    },
+    {
+      "id": "let-const-var",
+      "question": "What is the difference between let, const, and var?",
+      "answer": {
+        "var": {
+          "scope": "Function scoped",
+          "hoisting": "Hoisted and initialized with undefined",
+          "redeclaration": "Can be redeclared"
+        },
+        "let": {
+          "scope": "Block scoped",
+          "hoisting": "Hoisted but not initialized (temporal dead zone)",
+          "redeclaration": "Cannot be redeclared in same scope"
+        },
+        "const": {
+          "scope": "Block scoped",
+          "reassignment": "Cannot be reassigned",
+          "objects": "Object contents can be mutated"
+        }
+      },
+      "difficulty": "Easy",
+      "category": "JavaScript",
+      "tags": ["variables", "es6", "scope"]
+    },
+    {
+      "id": "promises-async",
+      "question": "Explain Promises and async/await in JavaScript.",
+      "answer": {
+        "promises": {
+          "definition": "Objects representing eventual completion or failure of asynchronous operations.",
+          "example": "const promise = new Promise((resolve, reject) => {\n    setTimeout(() => {\n        resolve('Success!');\n    }, 1000);\n});\n\npromise.then(result => console.log(result))\n       .catch(error => console.error(error));"
+        },
+        "asyncAwait": {
+          "definition": "Syntactic sugar for working with Promises.",
+          "example": "async function fetchData() {\n    try {\n        const result = await promise;\n        console.log(result);\n    } catch (error) {\n        console.error(error);\n    }\n}"
+        }
+      },
+      "difficulty": "Hard",
+      "category": "JavaScript",
+      "tags": ["promises", "async", "await", "asynchronous"]
+    }
+  ],
+  "git": [
+    {
+      "id": "merge-vs-rebase",
+      "question": "What is the difference between Git merge and Git rebase?",
+      "answer": {
+        "merge": {
+          "history": "Preserves complete history with merge commits",
+          "branch": "Creates a merge commit when merging",
+          "useCase": "Feature branches, maintaining exact history"
+        },
+        "rebase": {
+          "history": "Rewrites history as if changes were made sequentially",
+          "linear": "Creates a linear, cleaner history",
+          "useCase": "Local feature branches, keeping history clean"
+        },
+        "bestPractice": "Use rebase for local branches, merge for public/shared branches"
+      },
+      "difficulty": "Medium",
+      "category": "Git",
+      "tags": ["merge", "rebase", "workflow", "history"]
+    },
+    {
+      "id": "workflow",
+      "question": "Explain the Git workflow with branching strategies.",
+      "answer": {
+        "strategies": [
+          "Git Flow: Main branches (main, develop), supporting branches (feature, release, hotfix)",
+          "GitHub Flow: Simple workflow with main branch and feature branches",
+          "GitLab Flow: Combines Git Flow and GitHub Flow principles"
+        ],
+        "workflow": [
+          "Create feature branch from main/develop",
+          "Make commits with clear messages",
+          "Push to remote repository",
+          "Create pull request for review",
+          "Merge after approval",
+          "Delete feature branch"
+        ]
+      },
+      "difficulty": "Hard",
+      "category": "Git",
+      "tags": ["workflow", "branching", "collaboration", "strategies"]
+    }
+  ],
+  "web-concepts": [
+    {
+      "id": "cors",
+      "question": "What is CORS and how does it work?",
+      "answer": {
+        "definition": "CORS (Cross-Origin Resource Sharing): Security mechanism that allows or denies web requests from different origins.",
+        "mechanism": [
+          "Same-Origin Policy: Browsers restrict cross-origin requests",
+          "CORS Headers: Server sends Access-Control-Allow-* headers",
+          "Preflight Requests: OPTIONS requests for complex requests",
+          "Credentials: Cookies, authorization headers handling"
+        ],
+        "headers": ["Access-Control-Allow-Origin", "Access-Control-Allow-Methods", "Access-Control-Allow-Headers"]
+      },
+      "difficulty": "Medium",
+      "category": "Web Concepts",
+      "tags": ["cors", "security", "cross-origin", "browsers"]
+    },
+    {
+      "id": "rest-api",
+      "question": "Explain REST API principles and best practices.",
+      "answer": {
+        "principles": [
+          "Stateless: Each request contains all necessary information",
+          "Client-Server: Separation of concerns",
+          "Cacheable: Responses should indicate cacheability",
+          "Uniform Interface: Standard methods, resource identification",
+          "Layered System: Architecture can have multiple layers"
+        ],
+        "bestPractices": [
+          "HTTP Methods: GET, POST, PUT, DELETE, PATCH",
+          "Status Codes: Proper use of HTTP status codes",
+          "Versioning: API versioning strategy",
+          "Security: HTTPS, authentication, rate limiting"
+        ]
+      },
+      "difficulty": "Hard",
+      "category": "Web Concepts",
+      "tags": ["rest", "api", "principles", "best-practices"]
+    }
+  ]
+}

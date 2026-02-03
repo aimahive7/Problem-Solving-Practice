@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML, CSS, JavaScript, Git, and web development concepts through interactive tutorials, practice problems, and interview questions.">
+    <meta name="keywords" content="web development, HTML, CSS, JavaScript, Git, programming, tutorial, interview questions, coding practice">
+    <meta name="author" content="Web Dev Hub">
+    <meta property="og:title" content="Web Development Learning Hub">
+    <meta property="og:description" content="Master web development with interactive tutorials and practice problems">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="">
+    <title>Web Development Learning Hub - HTML, CSS, JavaScript & Git Tutorial</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="header-content">
+            <h1 class="logo">Web Dev Hub</h1>
+            <nav class="nav">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="theme-switcher">
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="neon">Neon</option>
+                    <option value="minimal">Minimal</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar" role="navigation" aria-label="Page navigation">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#introduction" aria-current="page">Introduction</a></li>
+                <li><a href="#syntax">Syntax</a></li>
+                <li><a href="#concepts">Core Concepts</a></li>
+                <li><a href="#roadmap">Learning Roadmap</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#mistakes">Common Mistakes</a></li>
+                <li><a href="#quiz">Mini Quiz</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content" id="main-content" role="main">
+            <section id="introduction" class="content-section reveal">
+                <h2>HTML Introduction</h2>
+                <p>HTML (HyperText Markup Language) is the foundation of web development. It provides the structure and semantic meaning to web content.</p>
+                <div class="card">
+                    <h3>What is HTML?</h3>
+                    <p>HTML uses tags to define elements like headings, paragraphs, links, images, and more. It's a markup language, not a programming language.</p>
+                </div>
+            </section>
+
+            <section id="syntax" class="content-section reveal">
+                <h2>HTML Syntax</h2>
+                <div class="card">
+                    <h3>Basic Structure</h3>
+                    <div class="code-block">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="concepts" class="content-section reveal">
+                <h2>Core Concepts</h2>
+                <div class="card">
+                    <h3>Elements and Tags</h3>
+                    <p>HTML elements are defined by tags, which are keywords surrounded by angle brackets.</p>
+                </div>
+                <div class="card">
+                    <h3>Attributes</h3>
+                    <p>Attributes provide additional information about HTML elements.</p>
+                </div>
+                <div class="card">
+                    <h3>Semantic HTML</h3>
+                    <p>Using meaningful tags like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt; improves accessibility and SEO.</p>
+                </div>
+            </section>
+
+            <section id="roadmap" class="content-section reveal">
+                <h2>HTML Learning Roadmap</h2>
+                <div class="roadmap">
+                    <div class="roadmap-diagram">
+                        <!-- Beginner Level -->
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">1</div>
+                            <div class="roadmap-node beginner">
+                                <div>HTML Basics</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Structure, tags, basic elements
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Tags</span>
+                                    <span class="roadmap-skill">Structure</span>
+                                    <span class="roadmap-skill">Attributes</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node beginner">
+                                <div>Forms & Input</div>
+                                <div class="roadmap-duration">1 week</div>
+                                <div class="roadmap-topic-details">
+                                    Form elements, validation, input types
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Forms</span>
+                                    <span class="roadmap-skill">Validation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Intermediate Level -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">2</div>
+                            <div class="roadmap-node intermediate">
+                                <div>Semantic HTML5</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Modern semantic elements, accessibility
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Semantic</span>
+                                    <span class="roadmap-skill">Accessibility</span>
+                                    <span class="roadmap-skill">HTML5</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node intermediate">
+                                <div>Media & Graphics</div>
+                                <div class="roadmap-duration">1 week</div>
+                                <div class="roadmap-topic-details">
+                                    Images, audio, video, canvas, SVG
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Media</span>
+                                    <span class="roadmap-skill">Canvas</span>
+                                    <span class="roadmap-skill">SVG</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Level -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">3</div>
+                            <div class="roadmap-node advanced">
+                                <div>Advanced Features</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Data attributes, meta tags, SEO
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Data Attributes</span>
+                                    <span class="roadmap-skill">SEO</span>
+                                    <span class="roadmap-skill">Meta Tags</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node advanced">
+                                <div>HTML APIs</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    DOM manipulation, web storage
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">DOM</span>
+                                    <span class="roadmap-skill">Storage</span>
+                                    <span class="roadmap-skill">APIs</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expert Level -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">4</div>
+                            <div class="roadmap-node expert">
+                                <div>Web Components</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Custom elements, shadow DOM
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Components</span>
+                                    <span class="roadmap-skill">Shadow DOM</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node expert">
+                                <div>Performance & SEO</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Optimization, structured data
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Performance</span>
+                                    <span class="roadmap-skill">Structured Data</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="examples" class="content-section reveal">
+                <h2>Examples</h2>
+                <div class="card">
+                    <h3>Creating a Form</h3>
+                    <div class="code-block">
+                        <pre><code>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mistakes" class="content-section reveal">
+                <h2>Common Mistakes</h2>
+                <div class="card">
+                    <h3>Unclosed Tags</h3>
+                    <p>Forgetting to close tags can break your layout.</p>
+                </div>
+                <div class="card">
+                    <h3>Missing DOCTYPE</h3>
+                    <p>Always include &lt;!DOCTYPE html&gt; at the beginning of your document.</p>
+                </div>
+                <div class="card">
+                    <h3>Using Deprecated Tags</h3>
+                    <p>Avoid tags like &lt;font&gt; and &lt;center&gt;. Use CSS instead.</p>
+                </div>
+            </section>
+
+            <section id="quiz" class="content-section reveal">
+                <h2>Mini Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h3>What does HTML stand for?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="a"> HyperText Markup Language</label>
+                            <label><input type="radio" name="q1" value="b"> High Tech Modern Language</label>
+                            <label><input type="radio" name="q1" value="c"> Home Tool Markup Language</label>
+                        </div>
+                        <button class="quiz-check">Check Answer</button>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright">
+                © <span id="currentYear">2024</span> Web Dev Hub. All rights reserved. Built with passion for web developers.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>

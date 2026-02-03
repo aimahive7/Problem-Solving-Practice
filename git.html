@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Learning Hub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Web Dev Hub</h1>
+            <nav class="nav">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="theme-switcher">
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="neon">Neon</option>
+                    <option value="minimal">Minimal</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#syntax">Basic Commands</a></li>
+                <li><a href="#concepts">Core Concepts</a></li>
+                <li><a href="#roadmap">Learning Roadmap</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#mistakes">Common Mistakes</a></li>
+                <li><a href="#quiz">Mini Quiz</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="introduction" class="content-section reveal">
+                <h2>Git Introduction</h2>
+                <p>Git is a distributed version control system that tracks changes in source code during software development.</p>
+                <div class="card">
+                    <h3>What is Git?</h3>
+                    <p>Git allows multiple developers to work on the same project simultaneously, track changes, and collaborate effectively.</p>
+                </div>
+            </section>
+
+            <section id="syntax" class="content-section reveal">
+                <h2>Basic Commands</h2>
+                <div class="card">
+                    <h3>Essential Git Commands</h3>
+                    <div class="code-block">
+                        <pre><code># Initialize repository
+git init
+
+# Add files to staging
+git add .
+git add filename.txt
+
+# Commit changes
+git commit -m "Commit message"
+
+# Check status
+git status
+
+# View history
+git log --oneline</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="concepts" class="content-section reveal">
+                <h2>Core Concepts</h2>
+                <div class="card">
+                    <h3>Repository</h3>
+                    <p>A project folder that Git tracks for changes.</p>
+                </div>
+                <div class="card">
+                    <h3>Commits</h3>
+                    <p>Snapshots of your project at specific points in time.</p>
+                </div>
+                <div class="card">
+                    <h3>Branches</h3>
+                    <p>Parallel lines of development for features and fixes.</p>
+                </div>
+                <div class="card">
+                    <h3>Merge</h3>
+                    <p>Combining changes from different branches.</p>
+                </div>
+            </section>
+
+            <section id="roadmap" class="content-section reveal">
+                <h2>Git Learning Roadmap</h2>
+                <div class="roadmap">
+                    <div class="roadmap-diagram">
+                        <!-- Level 1: Git Basics -->
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">1</div>
+                            <div class="roadmap-node beginner">
+                                <div>Git Basics</div>
+                                <div class="roadmap-duration">1 week</div>
+                                <div class="roadmap-topic-details">
+                                    Setup, init, add, commit, status
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">git init</span>
+                                    <span class="roadmap-skill">git add</span>
+                                    <span class="roadmap-skill">git commit</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node beginner">
+                                <div>Basic Commands</div>
+                                <div class="roadmap-duration">1 week</div>
+                                <div class="roadmap-topic-details">
+                                    Log, diff, restore, rm
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">git log</span>
+                                    <span class="roadmap-skill">git diff</span>
+                                    <span class="roadmap-skill">git restore</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 2: Branching -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">2</div>
+                            <div class="roadmap-node intermediate">
+                                <div>Branching</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Branch, checkout, merge, conflict resolution
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">git branch</span>
+                                    <span class="roadmap-skill">git merge</span>
+                                    <span class="roadmap-skill">Conflicts</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node intermediate">
+                                <div>Remote Repositories</div>
+                                <div class="roadmap-duration">1 week</div>
+                                <div class="roadmap-topic-details">
+                                    Clone, pull, push, remote
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">git clone</span>
+                                    <span class="roadmap-skill">git pull</span>
+                                    <span class="roadmap-skill">git push</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 3: Advanced Git -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">3</div>
+                            <div class="roadmap-node advanced">
+                                <div>Advanced Features</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Rebase, cherry-pick, stash, reset
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">git rebase</span>
+                                    <span class="roadmap-skill">git stash</span>
+                                    <span class="roadmap-skill">git reset</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node advanced">
+                                <div>Git History</div>
+                                <div class="roadmap-duration">1 week</div>
+                                <div class="roadmap-topic-details">
+                                    Bisect, blame, reflog
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">git bisect</span>
+                                    <span class="roadmap-skill">git blame</span>
+                                    <span class="roadmap-skill">git reflog</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 4: Git Workflows -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">4</div>
+                            <div class="roadmap-node expert">
+                                <div>Git Workflows</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Git Flow, GitHub Flow, GitLab Flow
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Git Flow</span>
+                                    <span class="roadmap-skill">GitHub Flow</span>
+                                    <span class="roadmap-skill">Branching Strategies</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node expert">
+                                <div>Git Administration</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Hooks, server setup, submodules
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Hooks</span>
+                                    <span class="roadmap-skill">Submodules</span>
+                                    <span class="roadmap-skill">Git Server</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="examples" class="content-section reveal">
+                <h2>Examples</h2>
+                <div class="card">
+                    <h3>Branch Workflow</h3>
+                    <div class="code-block">
+                        <pre><code># Create new branch
+git checkout -b feature/new-feature
+
+# Make changes and commit
+git add .
+git commit -m "Add new feature"
+
+# Switch back to main
+git checkout main
+
+# Merge feature branch
+git merge feature/new-feature
+
+# Delete feature branch
+git branch -d feature/new-feature</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mistakes" class="content-section reveal">
+                <h2>Common Mistakes</h2>
+                <div class="card">
+                    <h3>Committing Too Much</h3>
+                    <p>Make small, focused commits with clear messages.</p>
+                </div>
+                <div class="card">
+                    <h3>Not Pulling Before Pushing</h3>
+                    <p>Always pull latest changes before pushing to avoid conflicts.</p>
+                </div>
+                <div class="card">
+                    <h3>Ignoring .gitignore</h3>
+                    <p>Use .gitignore to exclude sensitive files and build artifacts.</p>
+                </div>
+            </section>
+
+            <section id="quiz" class="content-section reveal">
+                <h2>Mini Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h3>What command shows the status of your repository?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="a"> git status</label>
+                            <label><input type="radio" name="q1" value="b"> git check</label>
+                            <label><input type="radio" name="q1" value="c"> git show</label>
+                        </div>
+                        <button class="quiz-check">Check Answer</button>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright">
+                © <span id="currentYear">2024</span> Web Dev Hub. All rights reserved. Built with passion for web developers.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>

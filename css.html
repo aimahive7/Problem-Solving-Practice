@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Learning Hub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Web Dev Hub</h1>
+            <nav class="nav">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="theme-switcher">
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="neon">Neon</option>
+                    <option value="minimal">Minimal</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#syntax">Syntax</a></li>
+                <li><a href="#concepts">Core Concepts</a></li>
+                <li><a href="#roadmap">Learning Roadmap</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#mistakes">Common Mistakes</a></li>
+                <li><a href="#quiz">Mini Quiz</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="introduction" class="content-section reveal">
+                <h2>CSS Introduction</h2>
+                <p>CSS (Cascading Style Sheets) is the styling language of the web. It controls the visual presentation of HTML elements.</p>
+                <div class="card">
+                    <h3>What is CSS?</h3>
+                    <p>CSS allows you to create beautiful, responsive designs and control layout, colors, fonts, animations, and more.</p>
+                </div>
+            </section>
+
+            <section id="syntax" class="content-section reveal">
+                <h2>CSS Syntax</h2>
+                <div class="card">
+                    <h3>Basic Structure</h3>
+                    <div class="code-block">
+                        <pre><code>selector {
+    property: value;
+    property: value;
+}</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="concepts" class="content-section reveal">
+                <h2>Core Concepts</h2>
+                <div class="card">
+                    <h3>Box Model</h3>
+                    <p>Every element is a box with content, padding, border, and margin.</p>
+                </div>
+                <div class="card">
+                    <h3>Flexbox</h3>
+                    <p>Flexible box layout for one-dimensional layouts.</p>
+                </div>
+                <div class="card">
+                    <h3>Grid</h3>
+                    <p>Two-dimensional layout system for complex layouts.</p>
+                </div>
+                <div class="card">
+                    <h3>Responsive Design</h3>
+                    <p>Media queries and flexible units for different screen sizes.</p>
+                </div>
+            </section>
+
+            <section id="roadmap" class="content-section reveal">
+                <h2>CSS Learning Roadmap</h2>
+                <div class="roadmap">
+                    <div class="roadmap-diagram circular">
+                        <div class="roadmap-circle">
+                            <div class="roadmap-center">CSS<br>Mastery</div>
+                            
+                            <!-- Foundation Level -->
+                            <div class="roadmap-orbit" style="width: 150px; height: 150px; top: 25%; left: 25%;">
+                                <div class="roadmap-orbit-node" style="top: -20px; left: 50%; transform: translateX(-50%);">
+                                    Foundation
+                                </div>
+                            </div>
+                            
+                            <!-- Layout Level -->
+                            <div class="roadmap-orbit" style="width: 220px; height: 220px; top: 13%; left: 13%;">
+                                <div class="roadmap-orbit-node" style="top: 20%; right: -30px; transform: translateY(-50%);">
+                                    Layouts
+                                </div>
+                            </div>
+                            
+                            <!-- Advanced Level -->
+                            <div class="roadmap-orbit" style="width: 300px; height: 300px; top: 0; left: 0;">
+                                <div class="roadmap-orbit-node" style="bottom: 20%; left: -30px; transform: translateY(50%);">
+                                    Advanced
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap" style="margin-top: 2rem;">
+                        <div class="roadmap-diagram grid">
+                            <!-- Foundation -->
+                            <div class="roadmap-node beginner">
+                                <div>CSS Foundation</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Selectors, properties, specificity
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Selectors</span>
+                                    <span class="roadmap-skill">Box Model</span>
+                                    <span class="roadmap-skill">Units</span>
+                                </div>
+                            </div>
+
+                            <!-- Layout Systems -->
+                            <div class="roadmap-node intermediate">
+                                <div>Layout Systems</div>
+                                <div class="roadmap-duration">4 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Flexbox, Grid, positioning
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Flexbox</span>
+                                    <span class="roadmap-skill">Grid</span>
+                                    <span class="roadmap-skill">Positioning</span>
+                                </div>
+                            </div>
+
+                            <!-- Visual Effects -->
+                            <div class="roadmap-node intermediate">
+                                <div>Visual Effects</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Transitions, animations, transforms
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Transitions</span>
+                                    <span class="roadmap-skill">Animations</span>
+                                    <span class="roadmap-skill">Transforms</span>
+                                </div>
+                            </div>
+
+                            <!-- Advanced Concepts -->
+                            <div class="roadmap-node advanced">
+                                <div>Advanced CSS</div>
+                                <div class="roadmap-duration">4 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Custom properties, functions, mixins
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Variables</span>
+                                    <span class="roadmap-skill">Functions</span>
+                                    <span class="roadmap-skill">Preprocessors</span>
+                                </div>
+                            </div>
+
+                            <!-- Responsive Design -->
+                            <div class="roadmap-node advanced">
+                                <div>Responsive Design</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Media queries, mobile-first approach
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Media Queries</span>
+                                    <span class="roadmap-skill">Mobile-First</span>
+                                    <span class="roadmap-skill">Breakpoints</span>
+                                </div>
+                            </div>
+
+                            <!-- Architecture -->
+                            <div class="roadmap-node expert">
+                                <div>CSS Architecture</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Methodologies, optimization, performance
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">BEM</span>
+                                    <span class="roadmap-skill">Optimization</span>
+                                    <span class="roadmap-skill">Performance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="examples" class="content-section reveal">
+                <h2>Examples</h2>
+                <div class="card">
+                    <h3>Flexbox Layout</h3>
+                    <div class="code-block">
+                        <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.item {
+    padding: 20px;
+    margin: 10px;
+    background: #3498db;
+    color: white;
+}</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mistakes" class="content-section reveal">
+                <h2>Common Mistakes</h2>
+                <div class="card">
+                    <h3>Not Resetting CSS</h3>
+                    <p>Different browsers have different default styles. Use a CSS reset.</p>
+                </div>
+                <div class="card">
+                    <h3>Specificity Issues</h3>
+                    <p>Understanding specificity helps avoid CSS conflicts.</p>
+                </div>
+                <div class="card">
+                    <h3>Overusing !important</h3>
+                    <p>Avoid !important unless absolutely necessary.</p>
+                </div>
+            </section>
+
+            <section id="quiz" class="content-section reveal">
+                <h2>Mini Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h3>What does CSS stand for?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="a"> Cascading Style Sheets</label>
+                            <label><input type="radio" name="q1" value="b"> Computer Style Sheets</label>
+                            <label><input type="radio" name="q1" value="c"> Creative Style Sheets</label>
+                        </div>
+                        <button class="quiz-check">Check Answer</button>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright">
+                © <span id="currentYear">2024</span> Web Dev Hub. All rights reserved. Built with passion for web developers.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>

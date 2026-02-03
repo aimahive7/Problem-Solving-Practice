@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Concepts Learning Hub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Web Dev Hub</h1>
+            <nav class="nav">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="theme-switcher">
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="neon">Neon</option>
+                    <option value="minimal">Minimal</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#syntax">HTTP/HTTPS</a></li>
+                <li><a href="#concepts">Core Concepts</a></li>
+                <li><a href="#roadmap">Learning Roadmap</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#mistakes">Common Issues</a></li>
+                <li><a href="#quiz">Mini Quiz</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="introduction" class="content-section reveal">
+                <h2>Web Concepts Introduction</h2>
+                <p>Web development concepts form the foundation of how the internet works, from protocols to security principles.</p>
+                <div class="card">
+                    <h3>What are Web Concepts?</h3>
+                    <p>Understanding web architecture, protocols, security, and best practices is essential for building robust web applications.</p>
+                </div>
+            </section>
+
+            <section id="syntax" class="content-section reveal">
+                <h2>HTTP/HTTPS</h2>
+                <div class="card">
+                    <h3>HTTP Methods</h3>
+                    <div class="code-block">
+                        <pre><code>GET    - Retrieve data
+POST   - Create new data
+PUT    - Update existing data
+DELETE - Remove data
+PATCH  - Partial update</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Status Codes</h3>
+                    <p>200 OK, 201 Created, 400 Bad Request, 404 Not Found, 500 Server Error</p>
+                </div>
+            </section>
+
+            <section id="concepts" class="content-section reveal">
+                <h2>Core Concepts</h2>
+                <div class="card">
+                    <h3>Client-Server Architecture</h3>
+                    <p>Client makes requests, server processes and returns responses.</p>
+                </div>
+                <div class="card">
+                    <h3>REST API</h3>
+                    <p>Representational State Transfer for web services.</p>
+                </div>
+                <div class="card">
+                    <h3>CORS</h3>
+                    <p>Cross-Origin Resource Sharing for secure cross-domain requests.</p>
+                </div>
+                <div class="card">
+                    <h3>Web Security</h3>
+                    <p>HTTPS, XSS prevention, CSRF protection, authentication.</p>
+                </div>
+            </section>
+
+            <section id="roadmap" class="content-section reveal">
+                <h2>Web Concepts Learning Roadmap</h2>
+                <div class="roadmap">
+                    <div class="roadmap-diagram">
+                        <!-- Level 1: Web Fundamentals -->
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">1</div>
+                            <div class="roadmap-node beginner">
+                                <div>Web Fundamentals</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    How web works, URLs, protocols
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Internet</span>
+                                    <span class="roadmap-skill">URLs</span>
+                                    <span class="roadmap-skill">Protocols</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node beginner">
+                                <div>HTTP/HTTPS</div>
+                                <div class="roadmap-duration">2 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Request/response, status codes, methods
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">HTTP Methods</span>
+                                    <span class="roadmap-skill">Status Codes</span>
+                                    <span class="roadmap-skill">Headers</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 2: Web Architecture -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">2</div>
+                            <div class="roadmap-node intermediate">
+                                <div>Web Architecture</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Client-server, load balancers, CDNs
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Client-Server</span>
+                                    <span class="roadmap-skill">Load Balancing</span>
+                                    <span class="roadmap-skill">CDNs</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node intermediate">
+                                <div>Web Security</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    HTTPS, CORS, XSS, CSRF, authentication
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">HTTPS</span>
+                                    <span class="roadmap-skill">CORS</span>
+                                    <span class="roadmap-skill">XSS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 3: APIs & Services -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">3</div>
+                            <div class="roadmap-node advanced">
+                                <div>REST APIs</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    REST principles, API design, testing
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">REST</span>
+                                    <span class="roadmap-skill">API Design</span>
+                                    <span class="roadmap-skill">JSON</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node advanced">
+                                <div>Modern APIs</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    GraphQL, WebSockets, Service Workers
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">GraphQL</span>
+                                    <span class="roadmap-skill">WebSockets</span>
+                                    <span class="roadmap-skill">PWA</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 4: Advanced Concepts -->
+                        <div class="roadmap-vertical-connector"></div>
+                        <div class="roadmap-level">
+                            <div class="roadmap-timeline">4</div>
+                            <div class="roadmap-node expert">
+                                <div>Performance</div>
+                                <div class="roadmap-duration">3 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    Optimization, caching, metrics
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">Optimization</span>
+                                    <span class="roadmap-skill">Caching</span>
+                                    <span class="roadmap-skill">Core Web Vitals</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-arrow"></div>
+                            <div class="roadmap-node expert">
+                                <div>DevOps & Deployment</div>
+                                <div class="roadmap-duration">4 weeks</div>
+                                <div class="roadmap-topic-details">
+                                    CI/CD, containers, cloud platforms
+                                </div>
+                                <div class="roadmap-skills">
+                                    <span class="roadmap-skill">CI/CD</span>
+                                    <span class="roadmap-skill">Docker</span>
+                                    <span class="roadmap-skill">Cloud</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="examples" class="content-section reveal">
+                <h2>Examples</h2>
+                <div class="card">
+                    <h3>Fetch API Example</h3>
+                    <div class="code-block">
+                        <pre><code>fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));</code></pre>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mistakes" class="content-section reveal">
+                <h2>Common Issues</h2>
+                <div class="card">
+                    <h3>Ignoring Security</h3>
+                    <p>Always validate input and use HTTPS in production.</p>
+                </div>
+                <div class="card">
+                    <h3>No Error Handling</h3>
+                    <p>Implement proper error handling for API requests.</p>
+                </div>
+                <div class="card">
+                    <h3>Performance Issues</h3>
+                    <p>Optimize images, minify assets, use caching strategies.</p>
+                </div>
+            </section>
+
+            <section id="quiz" class="content-section reveal">
+                <h2>Mini Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h3>What does HTTP stand for?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="a"> HyperText Transfer Protocol</label>
+                            <label><input type="radio" name="q1" value="b"> High Tech Transfer Protocol</label>
+                            <label><input type="radio" name="q1" value="c"> Home Text Transfer Protocol</label>
+                        </div>
+                        <button class="quiz-check">Check Answer</button>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright">
+                © <span id="currentYear">2024</span> Web Dev Hub. All rights reserved. Built with passion for web developers.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>

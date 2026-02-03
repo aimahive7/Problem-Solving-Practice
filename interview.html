@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Web Dev Hub</h1>
+            <nav class="nav">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="theme-switcher">
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="neon">Neon</option>
+                    <option value="minimal">Minimal</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#html-interview">HTML</a></li>
+                <li><a href="#css-interview">CSS</a></li>
+                <li><a href="#javascript-interview">JavaScript</a></li>
+                <li><a href="#git-interview">Git</a></li>
+                <li><a href="#web-concepts-interview">Web Concepts</a></li>
+                <li><a href="#roadmap" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">🗺️ Learning Roadmaps</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="html-interview" class="content-section">
+                <h2>HTML Interview Questions</h2>
+                <div class="interview-qa">
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>What is the difference between HTML and HTML5?</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>Key differences:</strong></p>
+                            <ul>
+                                <li><strong>Semantic Elements:</strong> HTML5 introduces semantic tags like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;</li>
+                                <li><strong>Multimedia Support:</strong> Native audio and video support with &lt;audio&gt; and &lt;video&gt; tags</li>
+                                <li><strong>Graphics:</strong> Canvas and SVG for graphics</li>
+                                <li><strong>Form Elements:</strong> New input types like email, date, number, range</li>
+                                <li><strong>API Support:</strong> LocalStorage, Geolocation, Web Workers</li>
+                            </ul>
+                            <div class="difficulty-badge">Easy</div>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>What is semantic HTML and why is it important?</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>Semantic HTML</strong> uses HTML elements according to their intended purpose.</p>
+                            <p><strong>Importance:</strong></p>
+                            <ul>
+                                <li><strong>SEO:</strong> Search engines better understand content structure</li>
+                                <li><strong>Accessibility:</strong> Screen readers can navigate content better</li>
+                                <li><strong>Maintainability:</strong> Code is more readable and maintainable</li>
+                                <li><strong>Developer Experience:</strong> Clear structure makes development easier</li>
+                            </ul>
+                            <div class="difficulty-badge">Easy</div>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>Explain the DOCTYPE declaration and its purpose.</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>DOCTYPE:</strong> Document Type Declaration</p>
+                            <ul>
+                                <li><strong>Purpose:</strong> Tells the browser which version of HTML the document uses</li>
+                                <li><strong>HTML5:</strong> &lt;!DOCTYPE html&gt; is the simplest declaration</li>
+                                <li><strong>Browser Mode:</strong> Ensures browser uses standards mode instead of quirks mode</li>
+                                <li><strong>Validation:</strong> Required for HTML validation</li>
+                            </ul>
+                            <div class="difficulty-badge">Easy</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="css-interview" class="content-section">
+                <h2>CSS Interview Questions</h2>
+                <div class="interview-qa">
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>What is the CSS Box Model and how does it work?</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>CSS Box Model</strong> describes how elements are rendered:</p>
+                            <ul>
+                                <li><strong>Content:</strong> Actual content (text, images)</li>
+                                <li><strong>Padding:</strong> Space between content and border</li>
+                                <li><strong>Border:</strong> Border around padding</li>
+                                <li><strong>Margin:</strong> Space outside the border</li>
+                            </ul>
+                            <p><strong>box-sizing property:</strong></p>
+                            <ul>
+                                <li><strong>content-box:</strong> Width/height apply only to content</li>
+                                <li><strong>border-box:</strong> Width/height include padding and border</li>
+                            </ul>
+                            <div class="difficulty-badge">Medium</div>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>Explain the difference between Flexbox and CSS Grid.</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>Flexbox:</strong></p>
+                            <ul>
+                                <li><strong>Dimension:</strong> One-dimensional layout (row or column)</li>
+                                <li><strong>Use Case:</strong> Navigation bars, card layouts, form alignment</li>
+                                <li><strong>Alignment:</strong> Excellent for content alignment and distribution</li>
+                            </ul>
+                            <p><strong>CSS Grid:</strong></p>
+                            <ul>
+                                <li><strong>Dimension:</strong> Two-dimensional layout (rows and columns)</li>
+                                <li><strong>Use Case:</strong> Complex page layouts, dashboard designs</li>
+                                <li><strong>Control:</strong> Precise control over grid lines and areas</li>
+                            </ul>
+                            <p><strong>Usage:</strong> Can be used together - Grid for overall layout, Flexbox for component layout</p>
+                            <div class="difficulty-badge">Medium</div>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>What is CSS specificity and how is it calculated?</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>CSS Specificity</strong> determines which CSS rule applies when multiple rules match an element.</p>
+                            <p><strong>Calculation (from highest to lowest):</strong></p>
+                            <ul>
+                                <li><strong>Inline styles:</strong> 1000 points</li>
+                                <li><strong>ID selectors:</strong> 100 points each</li>
+                                <li><strong>Class selectors:</strong> 10 points each</li>
+                                <li><strong>Element selectors:</strong> 1 point each</li>
+                                <li><strong>Universal selector (*):</strong> 0 points</li>
+                            </ul>
+                            <p><strong>Important:</strong> !important overrides specificity but should be avoided</p>
+                            <div class="difficulty-badge">Hard</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="javascript-interview" class="content-section">
+                <h2>JavaScript Interview Questions</h2>
+                <div class="interview-qa">
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>Explain JavaScript closures with an example.</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>Closure:</strong> A function that has access to variables in its outer (enclosing) scope even after the outer function has returned.</p>
+                            <div class="code-block">
+                                <pre><code>function createCounter() {
+    let count = 0;
+    
+    return function() {
+        count++;
+        return count;
+    };
+}
+
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p><strong>Use Cases:</strong> Data privacy, function factories, event handlers</p>
+                            <div class="difficulty-badge">Medium</div>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>What is the difference between let, const, and var?</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>var:</strong></p>
+                            <ul>
+                                <li><strong>Scope:</strong> Function scoped</li>
+                                <li><strong>Hoisting:</strong> Hoisted and initialized with undefined</li>
+                                <li><strong>Redeclaration:</strong> Can be redeclared</li>
+                            </ul>
+                            <p><strong>let:</strong></p>
+                            <ul>
+                                <li><strong>Scope:</strong> Block scoped</li>
+                                <li><strong>Hoisting:</strong> Hoisted but not initialized (temporal dead zone)</li>
+                                <li><strong>Redeclaration:</strong> Cannot be redeclared in same scope</li>
+                            </ul>
+                            <p><strong>const:</strong></p>
+                            <ul>
+                                <li><strong>Scope:</strong> Block scoped</li>
+                                <li><strong>Reassignment:</strong> Cannot be reassigned</li>
+                                <li><strong>Objects:</strong> Object contents can be mutated</li>
+                            </ul>
+                            <div class="difficulty-badge">Easy</div>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>Explain Promises and async/await in JavaScript.</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>Promises:</strong> Objects representing eventual completion or failure of asynchronous operations.</p>
+                            <div class="code-block">
+                                <pre><code>const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Success!');
+    }, 1000);
+});
+
+promise.then(result => console.log(result))
+       .catch(error => console.error(error));</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <p><strong>async/await:</strong> Syntactic sugar for working with Promises.</p>
+                            <div class="code-block">
+                                <pre><code>async function fetchData() {
+    try {
+        const result = await promise;
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+}</code></pre>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <div class="difficulty-badge">Hard</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="git-interview" class="content-section">
+                <h2>Git Interview Questions</h2>
+                <div class="interview-qa">
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>What is the difference between Git merge and Git rebase?</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>Git Merge:</strong></p>
+                            <ul>
+                                <li><strong>History:</strong> Preserves complete history with merge commits</li>
+                                <li><strong>Branch:</strong> Creates a merge commit when merging</li>
+                                <li><strong>Use Case:</strong> Feature branches, maintaining exact history</li>
+                            </ul>
+                            <p><strong>Git Rebase:</strong></p>
+                            <ul>
+                                <li><strong>History:</strong> Rewrites history as if changes were made sequentially</li>
+                                <li><strong>Linear:</strong> Creates a linear, cleaner history</li>
+                                <li><strong>Use Case:</strong> Local feature branches, keeping history clean</li>
+                            </ul>
+                            <p><strong>Best Practice:</strong> Use rebase for local branches, merge for public/shared branches</p>
+                            <div class="difficulty-badge">Medium</div>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>Explain the Git workflow with branching strategies.</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>Common Branching Strategies:</strong></p>
+                            <ul>
+                                <li><strong>Git Flow:</strong> Main branches (main, develop), supporting branches (feature, release, hotfix)</li>
+                                <li><strong>GitHub Flow:</strong> Simple workflow with main branch and feature branches</li>
+                                <li><strong>GitLab Flow:</strong> Combines Git Flow and GitHub Flow principles</li>
+                            </ul>
+                            <p><strong>Typical Workflow:</strong></p>
+                            <ol>
+                                <li>Create feature branch from main/develop</li>
+                                <li>Make commits with clear messages</li>
+                                <li>Push to remote repository</li>
+                                <li>Create pull request for review</li>
+                                <li>Merge after approval</li>
+                                <li>Delete feature branch</li>
+                            </ol>
+                            <div class="difficulty-badge">Hard</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="web-concepts-interview" class="content-section">
+                <h2>Web Concepts Interview Questions</h2>
+                <div class="interview-qa">
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>What is CORS and how does it work?</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>CORS (Cross-Origin Resource Sharing):</strong> Security mechanism that allows or denies web requests from different origins.</p>
+                            <p><strong>How it works:</strong></p>
+                            <ul>
+                                <li><strong>Same-Origin Policy:</strong> Browsers restrict cross-origin requests</li>
+                                <li><strong>CORS Headers:</strong> Server sends Access-Control-Allow-* headers</li>
+                                <li><strong>Preflight Requests:</strong> OPTIONS requests for complex requests</li>
+                                <li><strong>Credentials:</strong> Cookies, authorization headers handling</li>
+                            </ul>
+                            <p><strong>Common Headers:</strong> Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers</p>
+                            <div class="difficulty-badge">Medium</div>
+                        </div>
+                    </div>
+
+                    <div class="qa-item">
+                        <div class="qa-question">
+                            <h3>Explain REST API principles and best practices.</h3>
+                            <button class="qa-toggle">▼</button>
+                        </div>
+                        <div class="qa-answer hidden">
+                            <p><strong>REST Principles:</strong></p>
+                            <ul>
+                                <li><strong>Stateless:</strong> Each request contains all necessary information</li>
+                                <li><strong>Client-Server:</strong> Separation of concerns</li>
+                                <li><strong>Cacheable:</strong> Responses should indicate cacheability</li>
+                                <li><strong>Uniform Interface:</strong> Standard methods, resource identification</li>
+                                <li><strong>Layered System:</strong> Architecture can have multiple layers</li>
+                            </ul>
+                            <p><strong>Best Practices:</strong></p>
+                            <ul>
+                                <li><strong>HTTP Methods:</strong> GET, POST, PUT, DELETE, PATCH</li>
+                                <li><strong>Status Codes:</strong> Proper use of HTTP status codes</li>
+                                <li><strong>Versioning:</strong> API versioning strategy</li>
+                                <li><strong>Security:</strong> HTTPS, authentication, rate limiting</li>
+                            </ul>
+                            <div class="difficulty-badge">Hard</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html">HTML</a>
+                <a href="css.html">CSS</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="git.html">Git</a>
+                <a href="web-concepts.html">Web Concepts</a>
+                <a href="notes.html">Notes</a>
+                <a href="problem-solving.html">Practice</a>
+                <a href="interview.html">Interview</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright">
+                © <span id="currentYear">2024</span> Web Dev Hub. All rights reserved. Built with passion for web developers.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>
