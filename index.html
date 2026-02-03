@@ -47,16 +47,67 @@
 
     <div class="container">
         <aside class="sidebar" role="navigation" aria-label="Page navigation">
-            <h3>Quick Navigation</h3>
-            <ul>
-                <li><a href="#introduction" aria-current="page">Introduction</a></li>
-                <li><a href="#syntax">Syntax</a></li>
-                <li><a href="#concepts">Core Concepts</a></li>
-                <li><a href="#roadmap">Learning Roadmap</a></li>
-                <li><a href="#examples">Examples</a></li>
-                <li><a href="#mistakes">Common Mistakes</a></li>
-                <li><a href="#quiz">Mini Quiz</a></li>
-            </ul>
+            <div class="sidebar-header">
+                <h3>Quick Navigation</h3>
+                <div class="sidebar-controls">
+                    <div class="scroll-controls">
+                        <button class="scroll-up" onclick="scrollSidebar('up')" aria-label="Scroll sidebar up">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 14l5-5 5 5z"/>
+                            </svg>
+                        </button>
+                        <button class="scroll-down" onclick="scrollSidebar('down')" aria-label="Scroll sidebar down">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="page-nav-controls">
+                        <button class="nav-up" onclick="navigateToPreviousSection()" aria-label="Go to previous section">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M5 12l7 7 7-7M12 19V5"/>
+                            </svg>
+                            <span>Prev</span>
+                        </button>
+                        <button class="nav-down" onclick="navigateToNextSection()" aria-label="Go to next section">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M5 12l7-7 7 7M12 5v14"/>
+                            </svg>
+                            <span>Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-content" id="sidebarContent">
+                <ul>
+                    <li><a href="#introduction" aria-current="page">Introduction</a></li>
+                    <li><a href="#syntax">Syntax</a></li>
+                    <li><a href="#concepts">Core Concepts</a></li>
+                    <li><a href="#roadmap">Learning Roadmap</a></li>
+                    <li>
+                        <a href="#examples" class="expand-toggle expanded">HTML Topics & Examples</a>
+                        <ul class="expanded">
+                            <li><a href="#basic-text-elements">Basic Text Elements</a></li>
+                            <li><a href="#lists">Lists</a></li>
+                            <li><a href="#links-images">Links and Images</a></li>
+                            <li><a href="#form-elements">Form Elements</a></li>
+                            <li><a href="#tables">Tables</a></li>
+                            <li><a href="#semantic-elements">Semantic Elements</a></li>
+                            <li><a href="#media-elements">Media Elements</a></li>
+                            <li><a href="#canvas-svg">Canvas and SVG</a></li>
+                            <li><a href="#meta-tags">Meta Tags</a></li>
+                            <li><a href="#input-types">Input Types</a></li>
+                            <li><a href="#form-validation">Form Validation</a></li>
+                            <li><a href="#data-attributes">Data Attributes</a></li>
+                            <li><a href="#global-attributes">Global Attributes</a></li>
+                            <li><a href="#iframe-embed">Iframe and Embed</a></li>
+                            <li><a href="#interactive-elements">Interactive Elements</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#mistakes">Common Mistakes</a></li>
+                    <li><a href="#quiz">Mini Quiz</a></li>
+                </ul>
+            </div>
         </aside>
 
         <main class="main-content" id="main-content" role="main">
@@ -234,20 +285,1044 @@
             </section>
 
             <section id="examples" class="content-section reveal">
-                <h2>Examples</h2>
-                <div class="card">
-                    <h3>Creating a Form</h3>
-                    <div class="code-block">
-                        <pre><code>&lt;form&gt;
-    &lt;label for="name"&gt;Name:&lt;/label&gt;
-    &lt;input type="text" id="name" name="name"&gt;
-    
-    &lt;label for="email"&gt;Email:&lt;/label&gt;
-    &lt;input type="email" id="email" name="email"&gt;
-    
-    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+                <h2>HTML Topics & Examples</h2>
+                
+                <!-- Basic HTML Elements -->
+                <div class="card" id="basic-text-elements">
+                    <h3>1. Basic Text Elements</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph with &lt;strong&gt;bold&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt; text.&lt;/p&gt;
+&lt;br&gt; &lt;!-- Line break --&gt;
+&lt;hr&gt; &lt;!-- Horizontal rule --&gt;
+&lt;span&gt;Inline element&lt;/span&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <h1>Main Heading</h1>
+                                <h2>Subheading</h2>
+                                <p>This is a paragraph with <strong>bold</strong> and <em>italic</em> text.</p>
+                                <br>
+                                <hr>
+                                <span>Inline element</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lists -->
+                <div class="card" id="lists">
+                    <h3>2. Lists</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List --&gt;
+&lt;ol&gt;
+    &lt;li&gt;Step one&lt;/li&gt;
+    &lt;li&gt;Step two&lt;/li&gt;
+    &lt;li&gt;Step three&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Description List --&gt;
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <!-- Unordered List -->
+                                <ul>
+                                    <li>First item</li>
+                                    <li>Second item</li>
+                                    <li>Third item</li>
+                                </ul>
+                                
+                                <!-- Ordered List -->
+                                <ol>
+                                    <li>Step one</li>
+                                    <li>Step two</li>
+                                    <li>Step three</li>
+                                </ol>
+                                
+                                <!-- Description List -->
+                                <dl>
+                                    <dt>HTML</dt>
+                                    <dd>HyperText Markup Language</dd>
+                                    <dt>CSS</dt>
+                                    <dd>Cascading Style Sheets</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links and Images -->
+                <div class="card" id="links-images">
+                    <h3>3. Links and Images</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- Links --&gt;
+&lt;a href="https://example.com"&gt;External Link&lt;/a&gt;
+&lt;a href="page.html"&gt;Internal Link&lt;/a&gt;
+&lt;a href="#section1"&gt;Anchor Link&lt;/a&gt;
+&lt;a href="mailto:email@example.com"&gt;Email Link&lt;/a&gt;
+&lt;a href="tel:+1234567890"&gt;Phone Link&lt;/a&gt;
+
+&lt;!-- Images --&gt;
+&lt;img src="https://picsum.photos/seed/html/300/200.jpg" alt="Description" width="300" height="200"&gt;
+&lt;img src="https://picsum.photos/seed/logo/100/50.jpg" alt="Logo" loading="lazy"&gt;
+
+&lt;!-- Image with link --&gt;
+&lt;a href="https://example.com"&gt;
+    &lt;img src="https://picsum.photos/seed/thumb/150/100.jpg" alt="Click to visit"&gt;
+&lt;/a&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <!-- Links -->
+                                <p>
+                                    <a href="https://example.com" target="_blank">External Link</a><br>
+                                    <a href="page.html">Internal Link</a><br>
+                                    <a href="#section1">Anchor Link</a><br>
+                                    <a href="mailto:email@example.com">Email Link</a><br>
+                                    <a href="tel:+1234567890">Phone Link</a>
+                                </p>
+                                
+                                <!-- Images -->
+                                <div style="margin: 10px 0;">
+                                    <img src="https://picsum.photos/seed/html/300/200.jpg" alt="Description" width="300" height="200"><br>
+                                    <img src="https://picsum.photos/seed/logo/100/50.jpg" alt="Logo" loading="lazy">
+                                </div>
+                                
+                                <!-- Image with link -->
+                                <p>
+                                    <a href="https://example.com" target="_blank">
+                                        <img src="https://picsum.photos/seed/thumb/150/100.jpg" alt="Click to visit">
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forms -->
+                <div class="card" id="form-elements">
+                    <h3>4. Form Elements</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Personal Information&lt;/legend&gt;
+        
+        &lt;label for="fullname"&gt;Full Name:&lt;/label&gt;
+        &lt;input type="text" id="fullname" name="fullname" required&gt;
+        
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+        
+        &lt;label for="age"&gt;Age:&lt;/label&gt;
+        &lt;input type="number" id="age" name="age" min="18" max="100"&gt;
+        
+        &lt;label for="birthdate"&gt;Birth Date:&lt;/label&gt;
+        &lt;input type="date" id="birthdate" name="birthdate"&gt;
+        
+        &lt;label for="password"&gt;Password:&lt;/label&gt;
+        &lt;input type="password" id="password" name="password" required&gt;
+        
+        &lt;label&gt;Gender:&lt;/label&gt;
+        &lt;input type="radio" id="male" name="gender" value="male"&gt;
+        &lt;label for="male"&gt;Male&lt;/label&gt;
+        &lt;input type="radio" id="female" name="gender" value="female"&gt;
+        &lt;label for="female"&gt;Female&lt;/label&gt;
+        
+        &lt;label&gt;Interests:&lt;/label&gt;
+        &lt;input type="checkbox" id="sports" name="interests" value="sports"&gt;
+        &lt;label for="sports"&gt;Sports&lt;/label&gt;
+        &lt;input type="checkbox" id="music" name="interests" value="music"&gt;
+        &lt;label for="music"&gt;Music&lt;/label&gt;
+        
+        &lt;label for="country"&gt;Country:&lt;/label&gt;
+        &lt;select id="country" name="country"&gt;
+            &lt;option value=""&gt;Select a country&lt;/option&gt;
+            &lt;option value="us"&gt;United States&lt;/option&gt;
+            &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+            &lt;option value="ca"&gt;Canada&lt;/option&gt;
+        &lt;/select&gt;
+        
+        &lt;label for="message"&gt;Message:&lt;/label&gt;
+        &lt;textarea id="message" name="message" rows="4" cols="50"&gt;&lt;/textarea&gt;
+        
+        &lt;input type="file" id="resume" name="resume" accept=".pdf,.doc"&gt;
+        
+        &lt;input type="hidden" name="form_id" value="contact_form"&gt;
+        
+        &lt;button type="submit"&gt;Submit&lt;/button&gt;
+        &lt;button type="reset"&gt;Reset&lt;/button&gt;
+        &lt;input type="button" value="Cancel" onclick="window.history.back()"&gt;
+    &lt;/fieldset&gt;
 &lt;/form&gt;</code></pre>
-                        <button class="copy-btn">Copy</button>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <form action="/submit" method="post" onsubmit="alert('Form submitted!'); return false;">
+                                    <fieldset>
+                                        <legend>Personal Information</legend>
+                                        
+                                        <label for="fullname">Full Name:</label><br>
+                                        <input type="text" id="fullname" name="fullname" required><br><br>
+                                        
+                                        <label for="email">Email:</label><br>
+                                        <input type="email" id="email" name="email" required><br><br>
+                                        
+                                        <label for="age">Age:</label><br>
+                                        <input type="number" id="age" name="age" min="18" max="100"><br><br>
+                                        
+                                        <label for="birthdate">Birth Date:</label><br>
+                                        <input type="date" id="birthdate" name="birthdate"><br><br>
+                                        
+                                        <label for="password">Password:</label><br>
+                                        <input type="password" id="password" name="password" required><br><br>
+                                        
+                                        <div>Gender:</div>
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        <label for="male">Male</label>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        <label for="female">Female</label><br><br>
+                                        
+                                        <div>Interests:</div>
+                                        <input type="checkbox" id="sports" name="interests" value="sports">
+                                        <label for="sports">Sports</label>
+                                        <input type="checkbox" id="music" name="interests" value="music">
+                                        <label for="music">Music</label><br><br>
+                                        
+                                        <label for="country">Country:</label><br>
+                                        <select id="country" name="country">
+                                            <option value="">Select a country</option>
+                                            <option value="us">United States</option>
+                                            <option value="uk">United Kingdom</option>
+                                            <option value="ca">Canada</option>
+                                        </select><br><br>
+                                        
+                                        <label for="message">Message:</label><br>
+                                        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                                        
+                                        <input type="file" id="resume" name="resume" accept=".pdf,.doc"><br><br>
+                                        
+                                        <input type="hidden" name="form_id" value="contact_form">
+                                        
+                                        <button type="submit">Submit</button>
+                                        <button type="reset">Reset</button>
+                                        <input type="button" value="Cancel" onclick="alert('Cancel clicked')">
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tables -->
+                <div class="card" id="tables">
+                    <h3>5. Tables</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;table border="1"&gt;
+    &lt;caption&gt;Employee Information&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th rowspan="2"&gt;Name&lt;/th&gt;
+            &lt;th colspan="2"&gt;Contact&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Email&lt;/th&gt;
+            &lt;th&gt;Phone&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John Doe&lt;/td&gt;
+            &lt;td&gt;john@example.com&lt;/td&gt;
+            &lt;td&gt;555-0123&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Jane Smith&lt;/td&gt;
+            &lt;td&gt;jane@example.com&lt;/td&gt;
+            &lt;td&gt;555-0456&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="3"&gt;Total: 2 employees&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <table border="1" style="border-collapse: collapse; width: 100%;">
+                                    <caption>Employee Information</caption>
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2">Name</th>
+                                            <th colspan="2">Contact</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>555-0123</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jane Smith</td>
+                                            <td>jane@example.com</td>
+                                            <td>555-0456</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="3">Total: 2 employees</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTML5 Semantic Elements -->
+                <div class="card" id="semantic-elements">
+                    <h3>6. HTML5 Semantic Elements</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;header&gt;
+            &lt;h1&gt;Article Title&lt;/h1&gt;
+            &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p&gt;Article content goes here...&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;p&gt;Author: John Doe&lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    
+    &lt;aside&gt;
+        &lt;h3&gt;Related Links&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Related Article 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Related Article 2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2024 Website Name. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <header style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+                                    <nav>
+                                        <ul style="list-style: none; display: flex; gap: 15px; margin: 0; padding: 0;">
+                                            <li><a href="#home" onclick="event.preventDefault(); alert('Home clicked')">Home</a></li>
+                                            <li><a href="#about" onclick="event.preventDefault(); alert('About clicked')">About</a></li>
+                                            <li><a href="#contact" onclick="event.preventDefault(); alert('Contact clicked')">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </header>
+                                
+                                <main style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                                    <article style="border: 1px solid #eee; padding: 10px; margin-bottom: 10px;">
+                                        <header>
+                                            <h1>Article Title</h1>
+                                            <time datetime="2024-01-15">January 15, 2024</time>
+                                        </header>
+                                        <section>
+                                            <p>Article content goes here...</p>
+                                        </section>
+                                        <footer>
+                                            <p>Author: John Doe</p>
+                                        </footer>
+                                    </article>
+                                    
+                                    <aside style="border: 1px solid #f0f0f0; padding: 10px;">
+                                        <h3>Related Links</h3>
+                                        <ul style="padding-left: 20px;">
+                                            <li><a href="#" onclick="event.preventDefault(); alert('Article 1 clicked')">Related Article 1</a></li>
+                                            <li><a href="#" onclick="event.preventDefault(); alert('Article 2 clicked')">Related Article 2</a></li>
+                                        </ul>
+                                    </aside>
+                                </main>
+                                
+                                <footer style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+                                    <p>&copy; 2024 Website Name. All rights reserved.</p>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Elements -->
+                <div class="card" id="media-elements">
+                    <h3>7. Media Elements</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- Video --&gt;
+&lt;video width="640" height="360" controls poster="https://picsum.photos/seed/poster/640/360.jpg"&gt;
+    &lt;source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"&gt;
+    &lt;source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;!-- Audio --&gt;
+&lt;audio controls&gt;
+    &lt;source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"&gt;
+    &lt;source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;!-- Embedded Content --&gt;
+&lt;iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        width="560" height="315" 
+        frameborder="0" 
+        allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <!-- Video -->
+                                <video width="320" height="180" controls poster="https://picsum.photos/seed/poster/640/360.jpg" style="max-width: 100%;">
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <br><br>
+                                
+                                <!-- Audio -->
+                                <audio controls style="width: 100%; max-width: 320px;">
+                                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                                    <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <br><br>
+                                
+                                <!-- Embedded Content -->
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                        width="320" height="180" 
+                                        frameborder="0" 
+                                        allowfullscreen
+                                        style="max-width: 100%;">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Canvas and SVG -->
+                <div class="card" id="canvas-svg">
+                    <h3>8. Canvas and SVG</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- Canvas --&gt;
+&lt;canvas id="myCanvas" width="400" height="200"&gt;
+    Your browser does not support the canvas element.
+&lt;/canvas&gt;
+
+&lt;!-- SVG --&gt;
+&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;circle cx="100" cy="100" r="50" fill="blue" /&gt;
+    &lt;rect x="50" y="50" width="100" height="100" fill="red" opacity="0.5" /&gt;
+    &lt;text x="100" y="105" text-anchor="middle" fill="white" font-size="20"&gt;SVG&lt;/text&gt;
+&lt;/svg&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <!-- Canvas -->
+                                <canvas id="myCanvas" width="400" height="200" style="border: 1px solid #ccc; max-width: 100%; height: auto;">
+                                    Your browser does not support the canvas element.
+                                </canvas>
+                                <br><br>
+                                
+                                <!-- SVG -->
+                                <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #ddd;">
+                                    <circle cx="100" cy="100" r="50" fill="blue" />
+                                    <rect x="50" y="50" width="100" height="100" fill="red" opacity="0.5" />
+                                    <text x="100" y="105" text-anchor="middle" fill="white" font-size="20">SVG</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meta Tags and Head Elements -->
+                <div class="card" id="meta-tags">
+                    <h3>9. Meta Tags and Head Elements</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="Page description for SEO"&gt;
+    &lt;meta name="keywords" content="html, css, javascript, web development"&gt;
+    &lt;meta name="author" content="Author Name"&gt;
+    
+    &lt;!-- Open Graph Meta Tags --&gt;
+    &lt;meta property="og:title" content="Page Title"&gt;
+    &lt;meta property="og:description" content="Page description"&gt;
+    &lt;meta property="og:image" content="image-url.jpg"&gt;
+    &lt;meta property="og:url" content="https://example.com/page"&gt;
+    
+    &lt;!-- Twitter Card Meta Tags --&gt;
+    &lt;meta name="twitter:card" content="summary_large_image"&gt;
+    &lt;meta name="twitter:title" content="Page Title"&gt;
+    &lt;meta name="twitter:description" content="Page description"&gt;
+    &lt;meta name="twitter:image" content="image-url.jpg"&gt;
+    
+    &lt;title&gt;Page Title&lt;/title&gt;
+    
+    &lt;!-- External CSS --&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    
+    &lt;!-- Favicon --&gt;
+    &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+    &lt;link rel="apple-touch-icon" href="apple-touch-icon.png"&gt;
+    
+    &lt;!-- Canonical URL --&gt;
+    &lt;link rel="canonical" href="https://example.com/page"&gt;
+    
+    &lt;!-- External JavaScript --&gt;
+    &lt;script src="script.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <div style="background: #f5f5f5; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <p><strong>Meta tags are invisible elements that provide information about the HTML document.</strong></p>
+                                    <p>These tags include:</p>
+                                    <ul style="margin: 10px 0; padding-left: 20px;">
+                                        <li>Character encoding: UTF-8</li>
+                                        <li>Viewport settings for responsive design</li>
+                                        <li>SEO description and keywords</li>
+                                        <li>Open Graph tags for social media sharing</li>
+                                        <li>Twitter Card meta tags</li>
+                                        <li>Favicon links</li>
+                                        <li>Canonical URL</li>
+                                        <li>External resource links (CSS, JS)</li>
+                                    </ul>
+                                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                                        <em>Note: Meta tags are processed by browsers and search engines, not displayed as visible content.</em>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Types -->
+                <div class="card" id="input-types">
+                    <h3>10. HTML5 Input Types</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;input type="text" placeholder="Text input"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="password" placeholder="Password"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="email" placeholder="email@example.com"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="url" placeholder="https://example.com"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="tel" placeholder="123-456-7890"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="search" placeholder="Search..."&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="number" min="1" max="10" step="1"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="range" min="0" max="100" value="50"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="date"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="time"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="datetime-local"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="month"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="week"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="color" value="#ff0000"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="file" accept="image/*"&gt;&lt;br&gt;&lt;br&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <input type="text" placeholder="Text input" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="password" placeholder="Password" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="email" placeholder="email@example.com" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="url" placeholder="https://example.com" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="tel" placeholder="123-456-7890" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="search" placeholder="Search..." style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="number" min="1" max="10" step="1" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="range" min="0" max="100" value="50" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="date" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="time" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="datetime-local" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="month" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="week" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="color" value="#ff0000" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <input type="file" accept="image/*" style="width: 100%; max-width: 200px; margin: 5px 0;"><br><br>
+                                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                                    <em>Hidden input type: <code>&lt;input type="hidden" name="csrf_token" value="abc123"&gt;</code></em><br>
+                                    (Hidden inputs are not visible to users)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Validation -->
+                <div class="card" id="form-validation">
+                    <h3>11. Form Validation Attributes</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;form&gt;
+    &lt;label&gt;Required Text: &lt;/label&gt;
+    &lt;input type="text" required&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label&gt;Required Email: &lt;/label&gt;
+    &lt;input type="email" required&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label&gt;Text (3-20 chars): &lt;/label&gt;
+    &lt;input type="text" minlength="3" maxlength="20" required&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label&gt;Age (18-100): &lt;/label&gt;
+    &lt;input type="number" min="18" max="100" required&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label&gt;URL (starts with http): &lt;/label&gt;
+    &lt;input type="url" pattern="https?://.+" title="Include http:// or https://"&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label&gt;Letters Only: &lt;/label&gt;
+    &lt;input type="text" placeholder="Enter letters only" pattern="[A-Za-z]+"&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label&gt;Multiple Emails: &lt;/label&gt;
+    &lt;input type="email" multiple placeholder="email1@example.com, email2@example.com"&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label&gt;Image File: &lt;/label&gt;
+    &lt;input type="file" accept=".jpg,.png,.gif" required&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;button type="submit"&gt;Submit to Test Validation&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <form onsubmit="event.preventDefault(); alert('Form validation tested!');">
+                                    <label>Required Text: </label>
+                                    <input type="text" required style="width: 100%; max-width: 250px; margin: 5px 0;"><br><br>
+                                    
+                                    <label>Required Email: </label>
+                                    <input type="email" required style="width: 100%; max-width: 250px; margin: 5px 0;"><br><br>
+                                    
+                                    <label>Text (3-20 chars): </label>
+                                    <input type="text" minlength="3" maxlength="20" required style="width: 100%; max-width: 250px; margin: 5px 0;"><br><br>
+                                    
+                                    <label>Age (18-100): </label>
+                                    <input type="number" min="18" max="100" required style="width: 100%; max-width: 250px; margin: 5px 0;"><br><br>
+                                    
+                                    <label>URL (starts with http): </label>
+                                    <input type="url" pattern="https?://.+" title="Include http:// or https://" style="width: 100%; max-width: 250px; margin: 5px 0;"><br><br>
+                                    
+                                    <label>Letters Only: </label>
+                                    <input type="text" placeholder="Enter letters only" pattern="[A-Za-z]+" style="width: 100%; max-width: 250px; margin: 5px 0;"><br><br>
+                                    
+                                    <label>Multiple Emails: </label>
+                                    <input type="email" multiple placeholder="email1@example.com, email2@example.com" style="width: 100%; max-width: 300px; margin: 5px 0;"><br><br>
+                                    
+                                    <label>Image File: </label>
+                                    <input type="file" accept=".jpg,.png,.gif" required style="margin: 5px 0;"><br><br>
+                                    
+                                    <button type="submit">Submit to Test Validation</button>
+                                </form>
+                                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                                    <em>Try submitting with invalid data to see validation in action!</em>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Attributes -->
+                <div class="card" id="data-attributes">
+                    <h3>12. Data Attributes</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;div data-user-id="123" data-role="admin" data-status="active" 
+     style="border: 1px solid #ccc; padding: 10px; margin: 5px 0;"
+     onclick="showDataAttributes(this)"&gt;
+    User Information (Click to see data attributes)
+&lt;/div&gt;
+
+&lt;button data-action="delete" data-item-id="456" 
+        onclick="handleAction(this)" style="margin: 5px;"&gt;
+    Delete Item
+&lt;/button&gt;
+
+&lt;ul&gt;
+    &lt;li data-category="electronics" data-price="299.99" 
+        onclick="showProductInfo(this)" style="cursor: pointer; padding: 5px;"&gt;
+        Laptop - Click for details
+    &lt;/li&gt;
+    &lt;li data-category="books" data-price="19.99" 
+        onclick="showProductInfo(this)" style="cursor: pointer; padding: 5px;"&gt;
+        Programming Book - Click for details
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+function showDataAttributes(element) {
+    const userId = element.dataset.userId;
+    const role = element.dataset.role;
+    const status = element.dataset.status;
+    alert(`User ID: ${userId}, Role: ${role}, Status: ${status}`);
+}
+
+function handleAction(button) {
+    const action = button.dataset.action;
+    const itemId = button.dataset.itemId;
+    alert(`Action: ${action}, Item ID: ${itemId}`);
+}
+
+function showProductInfo(element) {
+    const category = element.dataset.category;
+    const price = element.dataset.price;
+    alert(`Category: ${category}, Price: $${price}`);
+}
+&lt;/script&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <div data-user-id="123" data-role="admin" data-status="active" 
+                                     style="border: 1px solid #ccc; padding: 10px; margin: 5px 0; cursor: pointer; background: #f9f9f9;"
+                                     onclick="alert(`User ID: ${this.dataset.userId}, Role: ${this.dataset.role}, Status: ${this.dataset.status}`)">
+                                    <strong>User Information (Click to see data attributes)</strong>
+                                </div>
+                                
+                                <button data-action="delete" data-item-id="456" 
+                                        onclick="alert(`Action: ${this.dataset.action}, Item ID: ${this.dataset.itemId}`)" 
+                                        style="margin: 5px; padding: 8px 15px; background: #dc3545; color: white; border: none; border-radius: 3px; cursor: pointer;">
+                                    Delete Item
+                                </button>
+                                
+                                <ul style="padding-left: 20px;">
+                                    <li data-category="electronics" data-price="299.99" 
+                                        onclick="alert(`Category: ${this.dataset.category}, Price: $${this.dataset.price}`)" 
+                                        style="cursor: pointer; padding: 5px; margin: 5px 0; background: #e9ecef; border-radius: 3px;">
+                                        <strong>Laptop - Click for details</strong>
+                                    </li>
+                                    <li data-category="books" data-price="19.99" 
+                                        onclick="alert(`Category: ${this.dataset.category}, Price: $${this.dataset.price}`)" 
+                                        style="cursor: pointer; padding: 5px; margin: 5px 0; background: #e9ecef; border-radius: 3px;">
+                                        <strong>Programming Book - Click for details</strong>
+                                    </li>
+                                </ul>
+                                
+                                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                                    <em>Data attributes store custom data that can be accessed via JavaScript using <code>dataset</code> property.</em>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global Attributes -->
+                <div class="card" id="global-attributes">
+                    <h3>13. Global Attributes</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;div id="unique-id" class="class1 class2" title="Tooltip text" 
+     style="border: 1px solid #ccc; padding: 10px; margin: 5px 0; background: #f9f9f9;"&gt;
+    Hover over this for tooltip (title attribute)
+&lt;/div&gt;
+
+&lt;p id="styled-para" style="color: red; font-size: 16px; margin: 10px 0;"&gt;
+    Styled paragraph using style attribute
+&lt;/p&gt;
+
+&lt;input type="text" tabindex="1" accesskey="n" 
+       placeholder="Press Alt+N to focus (Accesskey)" 
+       style="margin: 5px 0;"&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;button onclick="this.innerHTML='Clicked!'" 
+        onmouseover="this.style.color='red'; this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.color='black'; this.style.transform='scale(1)'"
+        style="margin: 5px; padding: 8px 15px; border: 1px solid #ccc; cursor: pointer; transition: all 0.3s;"&gt;
+    Interactive Button (Hover and Click)
+&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;button onclick="document.getElementById('hidden-div').hidden = !document.getElementById('hidden-div').hidden" 
+        style="margin: 5px; padding: 8px 15px; background: #007bff; color: white; border: none; cursor: pointer;"&gt;
+    Toggle Hidden Content
+&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;div id="hidden-div" hidden style="border: 1px solid #28a745; padding: 10px; margin: 5px 0; background: #d4edda;"&gt;
+    This content was initially hidden (hidden attribute)
+&lt;/div&gt;
+
+&lt;span draggable="true" 
+      ondragstart="event.dataTransfer.setData('text', 'Dragging this text!')" 
+      style="border: 1px solid #6c757d; padding: 5px 10px; margin: 5px; cursor: move; background: #f8f9fa;"&gt;
+    Drag me!
+&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;input type="text" spellcheck="false" autocomplete="off" 
+       placeholder="Spellcheck and autocomplete disabled" 
+       style="margin: 5px 0;"&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <div id="unique-id" class="class1 class2" title="This is a tooltip text" 
+                                     style="border: 1px solid #ccc; padding: 10px; margin: 5px 0; background: #f9f9f9;">
+                                    Hover over this for tooltip (title attribute)
+                                </div>
+                                
+                                <p id="styled-para" style="color: red; font-size: 16px; margin: 10px 0;">
+                                    Styled paragraph using style attribute
+                                </p>
+                                
+                                <input type="text" tabindex="1" accesskey="n" 
+                                       placeholder="Press Alt+N to focus (Accesskey)" 
+                                       style="margin: 5px 0; width: 100%; max-width: 300px;"><br><br>
+                                
+                                <button onclick="this.innerHTML='Clicked!'" 
+                                        onmouseover="this.style.color='red'; this.style.transform='scale(1.1)'" 
+                                        onmouseout="this.style.color='black'; this.style.transform='scale(1)'"
+                                        style="margin: 5px; padding: 8px 15px; border: 1px solid #ccc; cursor: pointer; transition: all 0.3s;">
+                                    Interactive Button (Hover and Click)
+                                </button><br><br>
+                                
+                                <button onclick="document.getElementById('hidden-div').hidden = !document.getElementById('hidden-div').hidden" 
+                                        style="margin: 5px; padding: 8px 15px; background: #007bff; color: white; border: none; cursor: pointer;">
+                                    Toggle Hidden Content
+                                </button><br><br>
+                                
+                                <div id="hidden-div" hidden style="border: 1px solid #28a745; padding: 10px; margin: 5px 0; background: #d4edda;">
+                                    This content was initially hidden (hidden attribute)
+                                </div>
+                                
+                                <span draggable="true" 
+                                      ondragstart="event.dataTransfer.setData('text', 'Dragging this text!')" 
+                                      style="border: 1px solid #6c757d; padding: 5px 10px; margin: 5px; cursor: move; background: #f8f9fa; display: inline-block;">
+                                    Drag me!
+                                </span><br><br>
+                                
+                                <input type="text" spellcheck="false" autocomplete="off" 
+                                       placeholder="Spellcheck and autocomplete disabled" 
+                                       style="margin: 5px 0; width: 100%; max-width: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Iframe and Embed -->
+                <div class="card" id="iframe-embed">
+                    <h3>14. Iframe and Embed</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- Iframe with security attributes --&gt;
+&lt;iframe src="https://www.wikipedia.org" 
+        width="100%" height="300" frameborder="0"
+        sandbox="allow-same-origin allow-scripts allow-forms"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"&gt;
+    &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+&lt;/iframe&gt;
+
+&lt;!-- YouTube Embed --&gt;
+&lt;iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        width="100%" height="200" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;!-- Google Maps Embed --&gt;
+&lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb7a5b5%3A0x4b5b5c5c5c5c5c5c!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1234567890"
+        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"&gt;
+&lt;/iframe&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <p><strong>Wikipedia Embed:</strong></p>
+                                <iframe src="https://www.wikipedia.org" 
+                                        width="100%" height="250" frameborder="0"
+                                        sandbox="allow-same-origin allow-scripts allow-forms"
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        style="border: 1px solid #ddd; margin-bottom: 15px;">
+                                    <p>Your browser does not support iframes.</p>
+                                </iframe>
+                                
+                                <p><strong>YouTube Video:</strong></p>
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                        width="100%" height="200" frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        style="border: 1px solid #ddd; margin-bottom: 15px;">
+                                </iframe>
+                                
+                                <p><strong>Google Maps:</strong></p>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb7a5b5%3A0x4b5b5c5c5c5c5c5c!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1234567890"
+                                        width="100%" height="200" style="border:0; border: 1px solid #ddd;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Interactive Elements -->
+                <div class="card" id="interactive-elements">
+                    <h3>15. Interactive Elements</h3>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- Details and Summary --&gt;
+&lt;details&gt;
+    &lt;summary&gt;Click to expand HTML5 features&lt;/summary&gt;
+    &lt;p&gt;HTML5 introduced many new semantic elements:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;aside&amp;gt;&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;&amp;lt;figure&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;figcaption&amp;gt;&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;&amp;lt;time&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/details&gt;
+
+&lt;!-- Progress Bars --&gt;
+&lt;p&gt;Download Progress: &lt;progress value="75" max="100"&gt;75%&lt;/progress&gt;&lt;/p&gt;
+&lt;p&gt;Loading... &lt;progress max="100"&gt;&lt;/progress&gt; (Indeterminate)&lt;/p&gt;
+
+&lt;!-- Meter Elements --&gt;
+&lt;p&gt;Storage Used: &lt;meter value="6" min="0" max="10" low="3" high="8" optimum="9"&gt;6 out of 10 GB&lt;/meter&gt;&lt;/p&gt;
+&lt;p&gt;Battery Level: &lt;meter value="0.85" min="0" max="1" low="0.2" high="0.5" optimum="1"&gt;85%&lt;/meter&gt;&lt;/p&gt;
+&lt;p&gt;Temperature: &lt;meter value="25" min="0" max="100" low="20" high="30" optimum="22"&gt;25°C&lt;/meter&gt;&lt;/p&gt;
+
+&lt;!-- Dialog Box --&gt;
+&lt;button onclick="document.getElementById('myDialog').showModal()"&gt;
+    Open Dialog
+&lt;/button&gt;
+
+&lt;dialog id="myDialog"&gt;
+    &lt;p&gt;This is a modal dialog box!&lt;/p&gt;
+    &lt;p&gt;Dialogs can contain any HTML content.&lt;/p&gt;
+    &lt;button onclick="document.getElementById('myDialog').close()"&gt;Close Dialog&lt;/button&gt;
+&lt;/dialog&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                            <button class="run-btn">Run</button>
+                        </div>
+                        <div class="result-container">
+                            <h4>Result:</h4>
+                            <div class="result-box">
+                                <!-- Details and Summary -->
+                                <details style="margin: 10px 0; border: 1px solid #ddd; padding: 10px; border-radius: 5px;">
+                                    <summary style="cursor: pointer; font-weight: bold; padding: 5px;">Click to expand HTML5 features</summary>
+                                    <p style="margin: 10px 0;">HTML5 introduced many new semantic elements:</p>
+                                    <ul style="margin-left: 20px;">
+                                        <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code></li>
+                                        <li><code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code></li>
+                                        <li><code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code></li>
+                                        <li><code>&lt;time&gt;</code>, <code>&lt;mark&gt;</code></li>
+                                    </ul>
+                                </details>
+
+                                <!-- Progress Bars -->
+                                <p style="margin: 10px 0;">
+                                    Download Progress: <progress value="75" max="100" style="width: 200px;">75%</progress>
+                                </p>
+                                <p style="margin: 10px 0;">
+                                    Loading... <progress max="100" style="width: 200px;"></progress> (Indeterminate)
+                                </p>
+
+                                <!-- Meter Elements -->
+                                <p style="margin: 10px 0;">
+                                    Storage Used: <meter value="6" min="0" max="10" low="3" high="8" optimum="9" style="width: 200px;">6 out of 10 GB</meter>
+                                </p>
+                                <p style="margin: 10px 0;">
+                                    Battery Level: <meter value="0.85" min="0" max="1" low="0.2" high="0.5" optimum="1" style="width: 200px;">85%</meter>
+                                </p>
+                                <p style="margin: 10px 0;">
+                                    Temperature: <meter value="25" min="0" max="100" low="20" high="30" optimum="22" style="width: 200px;">25°C</meter>
+                                </p>
+
+                                <!-- Dialog Box -->
+                                <p style="margin: 10px 0;">
+                                    <button onclick="document.getElementById('myDialog').showModal()" 
+                                            style="padding: 8px 15px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 3px;">
+                                        Open Dialog
+                                    </button>
+                                </p>
+
+                                <dialog id="myDialog" style="border: 2px solid #007bff; border-radius: 8px; padding: 20px; max-width: 400px;">
+                                    <p><strong>This is a modal dialog box!</strong></p>
+                                    <p>Dialogs can contain any HTML content.</p>
+                                    <button onclick="document.getElementById('myDialog').close()" 
+                                            style="padding: 5px 10px; background: #dc3545; color: white; border: none; cursor: pointer; border-radius: 3px;">
+                                        Close Dialog
+                                    </button>
+                                </dialog>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -255,31 +1330,227 @@
             <section id="mistakes" class="content-section reveal">
                 <h2>Common Mistakes</h2>
                 <div class="card">
-                    <h3>Unclosed Tags</h3>
-                    <p>Forgetting to close tags can break your layout.</p>
+                    <h3>1. Unclosed Tags and Improper Nesting</h3>
+                    <p>One of the most common HTML mistakes is forgetting to close tags or improperly nesting elements. Every opening tag must have a corresponding closing tag, and elements should be properly nested within each other. For example, always close tags in reverse order: &lt;div&gt;&lt;p&gt;content&lt;/p&gt;&lt;/div&gt;, not &lt;div&gt;&lt;p&gt;content&lt;/div&gt;&lt;/p&gt;. This ensures proper HTML structure and prevents rendering issues.</p>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- WRONG: Unclosed tags and improper nesting --&gt;
+&lt;div&gt;&lt;p&gt;This paragraph is never closed
+&lt;div&gt;&lt;span&gt;Nesting error&lt;/div&gt;&lt;/span&gt;
+
+&lt;!-- CORRECT: Properly closed and nested --&gt;
+&lt;div&gt;
+    &lt;p&gt;This paragraph is properly closed&lt;/p&gt;
+    &lt;span&gt;Nesting is correct&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card">
-                    <h3>Missing DOCTYPE</h3>
-                    <p>Always include &lt;!DOCTYPE html&gt; at the beginning of your document.</p>
+                    <h3>2. Missing DOCTYPE Declaration</h3>
+                    <p>The DOCTYPE declaration is crucial for telling browsers which version of HTML to use. Without &lt;!DOCTYPE html&gt;, browsers enter "quirks mode," which can cause inconsistent rendering across different browsers. Always include &lt;!DOCTYPE html&gt; as the very first line of your HTML document to ensure standards mode and consistent behavior.</p>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- WRONG: Missing DOCTYPE --&gt;
+&lt;html&gt;
+    &lt;head&gt;...&lt;/head&gt;
+    &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;!-- CORRECT: Proper DOCTYPE --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;...&lt;/head&gt;
+    &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="card">
-                    <h3>Using Deprecated Tags</h3>
-                    <p>Avoid tags like &lt;font&gt; and &lt;center&gt;. Use CSS instead.</p>
+                    <h3>3. Using Deprecated Tags and Attributes</h3>
+                    <p>Many older HTML tags and attributes have been deprecated in HTML5 in favor of CSS. Avoid using tags like &lt;font&gt;, &lt;center&gt;, &lt;marquee&gt;, and attributes like bgcolor, border, and align. Instead, use modern semantic HTML elements and CSS for styling and layout. This improves accessibility, maintainability, and follows web standards.</p>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- WRONG: Deprecated tags and attributes --&gt;
+&lt;font face="Arial" color="red" size="5"&gt;Red Text&lt;/font&gt;
+&lt;center&gt;Centered content&lt;/center&gt;
+&lt;table border="1" cellpadding="5"&gt;
+
+&lt;!-- CORRECT: Modern HTML and CSS --&gt;
+&lt;span style="font-family: Arial; color: red; font-size: 1.5em;"&gt;Red Text&lt;/span&gt;
+&lt;div style="text-align: center;"&gt;Centered content&lt;/div&gt;
+&lt;table style="border: 1px solid black; padding: 5px;"&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>4. Missing ALT Text for Images</h3>
+                    <p>Images without alt text create accessibility barriers for screen reader users and fail WCAG guidelines. The alt attribute provides alternative text for images when they cannot be displayed. Always include descriptive alt text for meaningful images and use empty alt="" for decorative images.</p>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- WRONG: Missing alt text --&gt;
+&lt;img src="logo.jpg"&gt;
+&lt;img src="chart.png" alt=""&gt; &lt;!-- Missing description --&gt;
+
+&lt;!-- CORRECT: Proper alt text --&gt;
+&lt;img src="logo.jpg" alt="Company Logo"&gt;
+&lt;img src="chart.png" alt="Sales increased by 25% in Q3 2024"&gt;
+&lt;img src="decoration.png" alt=""&gt; &lt;!-- Decorative image --&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>5. Improper Use of Heading Tags</h3>
+                    <p>Headings should be used hierarchically (h1, h2, h3, etc.) and not for styling text. Don't skip heading levels (jumping from h1 to h3 without h2), and don't use headings just to make text bold or larger. Proper heading structure is crucial for SEO, accessibility, and document outline.</p>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- WRONG: Improper heading structure --&gt;
+&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt; &lt;!-- Skipped h2 --&gt;
+&lt;h5&gt;Small text&lt;/h5&gt; &lt;!-- Used for styling --&gt;
+
+&lt;!-- CORRECT: Hierarchical heading structure --&gt;
+&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Main Section&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;
+&lt;p&gt;Regular text for styling&lt;/p&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>6. Forgetting Form Labels</h3>
+                    <p>Every form input must have an associated label for accessibility. Labels help screen readers identify form fields and improve usability by providing larger click targets. Use the for attribute to link labels to their corresponding input elements.</p>
+                    <div class="example-container">
+                        <div class="code-block">
+                            <pre><code>&lt;!-- WRONG: Missing labels --&gt;
+Name: &lt;input type="text" name="name"&gt;
+&lt;input type="checkbox" name="agree"&gt; I agree
+
+&lt;!-- CORRECT: Proper labels --&gt;
+&lt;label for="name"&gt;Name:&lt;/label&gt;
+&lt;input type="text" id="name" name="name"&gt;
+
+&lt;input type="checkbox" id="agree" name="agree"&gt;
+&lt;label for="agree"&gt;I agree&lt;/label&gt;</code></pre>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section id="quiz" class="content-section reveal">
                 <h2>Mini Quiz</h2>
+                <p class="quiz-intro">Test your HTML knowledge with this interactive quiz covering all the topics we've covered. Select your answers and click "Check Answers" to see how well you've mastered HTML!</p>
+                
                 <div class="quiz-container">
+                    <!-- Question 1 -->
                     <div class="quiz-question">
-                        <h3>What does HTML stand for?</h3>
+                        <h3>Question 1: What does HTML stand for?</h3>
                         <div class="quiz-options">
                             <label><input type="radio" name="q1" value="a"> HyperText Markup Language</label>
                             <label><input type="radio" name="q1" value="b"> High Tech Modern Language</label>
                             <label><input type="radio" name="q1" value="c"> Home Tool Markup Language</label>
                         </div>
-                        <button class="quiz-check">Check Answer</button>
-                        <div class="quiz-feedback"></div>
+                        <div class="quiz-feedback" data-answer="a" data-explanation="HTML stands for HyperText Markup Language, the standard markup language for creating web pages."></div>
+                    </div>
+                    
+                    <!-- Question 2 -->
+                    <div class="quiz-question">
+                        <h3>Question 2: Which HTML5 element is used for navigation links?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q2" value="a"> &lt;navigation&gt;</label>
+                            <label><input type="radio" name="q2" value="b"> &lt;nav&gt;</label>
+                            <label><input type="radio" name="q2" value="c"> &lt;menu&gt;</label>
+                        </div>
+                        <div class="quiz-feedback" data-answer="b" data-explanation="The &lt;nav&gt; element is specifically designed for navigation menus and links in HTML5."></div>
+                    </div>
+                    
+                    <!-- Question 3 -->
+                    <div class="quiz-question">
+                        <h3>Question 3: What is the purpose of the alt attribute in img tags?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q3" value="a"> To specify the image source</label>
+                            <label><input type="radio" name="q3" value="b"> To provide alternative text for screen readers</label>
+                            <label><input type="radio" name="q3" value="c"> To set the alignment of the image</label>
+                        </div>
+                        <div class="quiz-feedback" data-answer="b" data-explanation="The alt attribute provides alternative text for accessibility, helping screen readers describe the image to visually impaired users."></div>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="quiz-question">
+                        <h3>Question 4: Which input type should be used for email addresses?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q4" value="a"> &lt;input type="text"&gt;</label>
+                            <label><input type="radio" name="q4" value="b"> &lt;input type="email"&gt;</label>
+                            <label><input type="radio" name="q4" value="c"> &lt;input type="mail"&gt;</label>
+                        </div>
+                        <div class="quiz-feedback" data-answer="b" data-explanation="The email input type provides built-in validation and a specialized keyboard on mobile devices for email input."></div>
+                    </div>
+                    
+                    <!-- Question 5 -->
+                    <div class="quiz-question">
+                        <h3>Question 5: What is semantic HTML?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q5" value="a"> HTML with inline styling</label>
+                            <label><input type="radio" name="q5" value="b"> HTML that describes the meaning of content</label>
+                            <label><input type="radio" name="q5" value="c"> HTML with comments explaining the code</label>
+                        </div>
+                        <div class="quiz-feedback" data-answer="b" data-explanation="Semantic HTML uses elements that clearly describe their meaning to both the browser and developer, like &lt;header&gt;, &lt;nav&gt;, and &lt;article&gt;."></div>
+                    </div>
+                    
+                    <!-- Question 6 -->
+                    <div class="quiz-question">
+                        <h3>Question 6: Which attribute is used to create a unique identifier for an element?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q6" value="a"> class</label>
+                            <label><input type="radio" name="q6" value="b"> name</label>
+                            <label><input type="radio" name="q6" value="c"> id</label>
+                        </div>
+                        <div class="quiz-feedback" data-answer="c" data-explanation="The id attribute provides a unique identifier for an element on the page, used for CSS targeting and JavaScript selection."></div>
+                    </div>
+                    
+                    <!-- Question 7 -->
+                    <div class="quiz-question">
+                        <h3>Question 7: What does the DOCTYPE declaration do?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q7" value="a"> It defines the document title</label>
+                            <label><input type="radio" name="q7" value="b"> It tells the browser which version of HTML to use</label>
+                            <label><input type="radio" name="q7" value="c"> It links to external stylesheets</label>
+                        </div>
+                        <div class="quiz-feedback" data-answer="b" data-explanation="The DOCTYPE declaration tells the browser which version of HTML the document uses, ensuring proper rendering mode."></div>
+                    </div>
+                    
+                    <!-- Question 8 -->
+                    <div class="quiz-question">
+                        <h3>Question 8: Which HTML5 element is best suited for independent content like blog posts?</h3>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q8" value="a"> &lt;section&gt;</label>
+                            <label><input type="radio" name="q8" value="b"> &lt;div&gt;</label>
+                            <label><input type="radio" name="q8" value="c"> &lt;article&gt;</label>
+                        </div>
+                        <div class="quiz-feedback" data-answer="c" data-explanation="The &lt;article&gt; element represents self-contained content that could be distributed independently, like blog posts or news articles."></div>
+                    </div>
+                    
+                    <!-- Quiz Controls -->
+                    <div class="quiz-controls">
+                        <button class="quiz-check" onclick="checkAllAnswers()">Check All Answers</button>
+                        <button class="quiz-reset" onclick="resetQuiz()">Reset Quiz</button>
+                    </div>
+                    
+                    <div class="quiz-results" id="quizResults" style="display: none;">
+                        <h3>Quiz Results</h3>
+                        <div class="score-display" id="scoreDisplay"></div>
+                        <div class="score-message" id="scoreMessage"></div>
                     </div>
                 </div>
             </section>
@@ -305,6 +1576,1018 @@
         </div>
     </footer>
 
+    <style>
+        .example-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .result-container {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        
+        .result-box {
+            min-height: 100px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        
+        .run-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        
+        .run-btn:hover {
+            background-color: #218838;
+        }
+        
+        .sidebar ul ul {
+            display: none;
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
+        
+        .sidebar ul ul.expanded {
+            display: block;
+        }
+        
+        .sidebar .expand-toggle {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .sidebar .expand-toggle::before {
+            content: "▶";
+            display: inline-block;
+            width: 15px;
+            margin-right: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .sidebar .expand-toggle.expanded::before {
+            transform: rotate(90deg);
+        }
+        
+        /* Sidebar Enhancements */
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px 15px 20px;
+            border-bottom: 1px solid #e9ecef;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            flex-shrink: 0;
+        }
+        
+        .sidebar-header h3 {
+            margin: 0;
+            font-size: 1.1em;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .scroll-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
+        .scroll-up, .scroll-down {
+            width: 24px;
+            height: 24px;
+            border: 1px solid #dee2e6;
+            background: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        
+        .scroll-up:hover, .scroll-down:hover {
+            background: #007bff;
+            border-color: #007bff;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .scroll-up:active, .scroll-down:active {
+            transform: scale(0.95);
+        }
+        
+        .sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+        
+        .sidebar-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+        
+        .sidebar-content::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 3px;
+        }
+        
+        .sidebar-content::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+        
+        /* Better sidebar links */
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar > .sidebar-content > ul > li {
+            margin-bottom: 8px;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 8px 12px;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+        
+        .sidebar a:hover {
+            background: #e3f2fd;
+            color: #1976d2;
+            transform: translateX(2px);
+        }
+        
+        .sidebar a[aria-current="page"] {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,123,255,0.3);
+        }
+        
+        .sidebar .expand-toggle {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .sidebar ul ul {
+            margin-top: 6px;
+            margin-left: 8px;
+        }
+        
+        .sidebar ul ul li {
+            margin-bottom: 4px;
+        }
+        
+        .sidebar ul ul a {
+            font-size: 0.85em;
+            padding: 6px 10px;
+            color: #6c757d;
+        }
+        
+        .sidebar ul ul a:hover {
+            background: #f8f9fa;
+            color: #007bff;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .example-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .result-box {
+                min-height: 80px;
+            }
+            
+            .sidebar {
+                position: static;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            
+            .sidebar-content {
+                max-height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                margin-bottom: 20px;
+                height: auto;
+            }
+            
+            .sidebar-header {
+                padding: 15px 15px 10px 15px;
+            }
+            
+            .sidebar-content {
+                padding: 15px;
+                max-height: 250px;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-box iframe,
+            .result-box video,
+            .result-box svg {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .result-box input,
+            .result-box button,
+            .result-box select {
+                max-width: 100%;
+            }
+            
+            .code-block pre {
+                font-size: 14px;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+            
+            .card {
+                padding: 15px;
+                margin: 10px 0;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+            
+            .scroll-controls {
+                flex-direction: row;
+                gap: 4px;
+            }
+            
+            .scroll-up, .scroll-down {
+                width: 28px;
+                height: 28px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .sidebar-header {
+                padding: 12px 12px 8px 12px;
+            }
+            
+            .sidebar-header h3 {
+                font-size: 1em;
+            }
+            
+            .sidebar-content {
+                padding: 12px;
+                max-height: 200px;
+            }
+            
+            .sidebar a {
+                font-size: 0.9em;
+                padding: 6px 8px;
+            }
+            
+            .sidebar ul ul a {
+                font-size: 0.8em;
+                padding: 5px 8px;
+            }
+            
+            .result-container {
+                padding: 10px;
+            }
+            
+            .code-block pre {
+                font-size: 12px;
+            }
+            
+            .run-btn, .copy-btn {
+                padding: 3px 10px;
+                font-size: 12px;
+            }
+        }
+        
+        /* Sidebar Controls Styling */
+        .sidebar-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .page-nav-controls {
+            display: flex;
+            gap: 4px;
+        }
+        
+        .nav-up, .nav-down {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            border: 1px solid #dee2e6;
+            background: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s ease;
+            color: #495057;
+        }
+        
+        .nav-up:hover, .nav-down:hover {
+            background: #007bff;
+            border-color: #007bff;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .nav-up:active, .nav-down:active {
+            transform: scale(0.95);
+        }
+        
+        /* Quiz Styling */
+        .quiz-intro {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .quiz-container {
+            display: grid;
+            gap: 25px;
+        }
+        
+        .quiz-question {
+            background: #ffffff;
+            border: 1px solid #e1e5e9;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .quiz-question:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+        
+        .quiz-question h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .quiz-options {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .quiz-options label {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #fafafa;
+        }
+        
+        .quiz-options label:hover {
+            border-color: #007bff;
+            background: #e3f2fd;
+            transform: translateX(5px);
+        }
+        
+        .quiz-options input[type="radio"] {
+            margin-right: 12px;
+            min-width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .quiz-feedback {
+            display: none;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.95em;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .quiz-feedback.correct {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .quiz-feedback.incorrect {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        
+        .quiz-controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .quiz-check, .quiz-reset {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .quiz-check {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        .quiz-check:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+        
+        .quiz-reset {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+        }
+        
+        .quiz-reset:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+        }
+        
+        .quiz-results {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #dee2e6;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .quiz-results h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .score-display {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .score-message {
+            font-size: 1.2em;
+            color: #495057;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+        
+        /* Better mobile scrolling */
+        @media (hover: none) and (pointer: coarse) {
+            .sidebar .expand-toggle:hover {
+                background-color: #f0f0f0;
+                color: #007bff;
+            }
+            
+            .sidebar a:hover {
+                background-color: transparent;
+                color: #007bff;
+                transform: none;
+            }
+            
+            .scroll-up:hover, .scroll-down:hover {
+                background: #007bff;
+                border-color: #007bff;
+                color: white;
+            }
+            
+            .nav-up:hover, .nav-down:hover {
+                background: #007bff;
+                border-color: #007bff;
+                color: white;
+            }
+            
+            .quiz-options label:hover {
+                border-color: #007bff;
+                background: #e3f2fd;
+                transform: none;
+            }
+        }
+    </style>
+    
+    <script>
+        // Interactive Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar navigation expand/collapse
+            const navLinks = document.querySelectorAll('.sidebar a[href="#examples"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sublist = this.parentElement.querySelector('ul');
+                    if (sublist) {
+                        sublist.classList.toggle('expanded');
+                        this.classList.toggle('expanded');
+                    }
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('.sidebar a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#') && href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                            
+                            // Update active state
+                            document.querySelectorAll('.sidebar a').forEach(a => {
+                                a.removeAttribute('aria-current');
+                            });
+                            this.setAttribute('aria-current', 'page');
+                        }
+                    }
+                });
+            });
+            
+            // Copy button functionality
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const codeBlock = this.parentElement.querySelector('code');
+                    if (codeBlock) {
+                        navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                            const originalText = this.textContent;
+                            this.textContent = 'Copied!';
+                            this.style.backgroundColor = '#28a745';
+                            setTimeout(() => {
+                                this.textContent = originalText;
+                                this.style.backgroundColor = '';
+                            }, 2000);
+                        });
+                    }
+                });
+            });
+            
+            // Run button functionality - toggle result visibility
+            document.querySelectorAll('.run-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const resultContainer = this.closest('.example-container').querySelector('.result-container');
+                    if (resultContainer) {
+                        const isHidden = resultContainer.style.display === 'none';
+                        resultContainer.style.display = isHidden ? 'block' : 'none';
+                        this.textContent = isHidden ? 'Hide' : 'Run';
+                        
+                        if (isHidden) {
+                            resultContainer.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'nearest'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Show all results by default
+            document.querySelectorAll('.result-container').forEach(container => {
+                container.style.display = 'block';
+            });
+            
+            // Auto-expand examples section in sidebar
+            const examplesLink = document.querySelector('.expand-toggle');
+            const examplesSublist = examplesLink?.parentElement.querySelector('ul');
+            if (examplesSublist) {
+                examplesSublist.classList.add('expanded');
+                examplesLink.classList.add('expanded');
+            }
+            
+            // Initialize canvas drawing
+            const canvas = document.getElementById('myCanvas');
+            if (canvas && canvas.getContext) {
+                const ctx = canvas.getContext('2d');
+                
+                // Draw a simple pattern
+                ctx.fillStyle = '#007bff';
+                ctx.fillRect(50, 50, 100, 50);
+                
+                ctx.beginPath();
+                ctx.arc(200, 75, 30, 0, Math.PI * 2);
+                ctx.fillStyle = '#28a745';
+                ctx.fill();
+                
+                ctx.font = '20px Arial';
+                ctx.fillStyle = '#dc3545';
+                ctx.fillText('Canvas Demo', 120, 150);
+                
+                // Draw a line
+                ctx.beginPath();
+                ctx.moveTo(50, 100);
+                ctx.lineTo(350, 100);
+                ctx.strokeStyle = '#6c757d';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+        });
+
+        // Sidebar scroll functionality
+        function scrollSidebar(direction) {
+            const sidebarContent = document.getElementById('sidebarContent');
+            if (!sidebarContent) return;
+            
+            const scrollAmount = 150; // pixels to scroll
+            const currentScroll = sidebarContent.scrollTop;
+            const maxScroll = sidebarContent.scrollHeight - sidebarContent.clientHeight;
+            
+            if (direction === 'up') {
+                const newScroll = Math.max(0, currentScroll - scrollAmount);
+                sidebarContent.scrollTo({
+                    top: newScroll,
+                    behavior: 'smooth'
+                });
+            } else if (direction === 'down') {
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                sidebarContent.scrollTo({
+                    top: newScroll,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Keyboard navigation for sidebar
+        document.addEventListener('keydown', function(e) {
+            // Only if sidebar is focused or visible
+            const sidebar = document.querySelector('.sidebar');
+            if (!sidebar) return;
+            
+            // Ctrl + Arrow keys for sidebar scrolling
+            if (e.ctrlKey) {
+                if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    scrollSidebar('up');
+                } else if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    scrollSidebar('down');
+                }
+            }
+        });
+
+        // Auto-scroll sidebar to active section
+        function scrollToActiveSection() {
+            const activeLink = document.querySelector('.sidebar a[aria-current="page"]');
+            const sidebarContent = document.getElementById('sidebarContent');
+            
+            if (activeLink && sidebarContent) {
+                const linkTop = activeLink.offsetTop;
+                const linkHeight = activeLink.offsetHeight;
+                const viewportHeight = sidebarContent.clientHeight;
+                const scrollTop = sidebarContent.scrollTop;
+                
+                // Check if link is visible in viewport
+                if (linkTop < scrollTop || linkTop + linkHeight > scrollTop + viewportHeight) {
+                    // Center the link in the sidebar viewport
+                    const targetScroll = linkTop - (viewportHeight / 2) + (linkHeight / 2);
+                    sidebarContent.scrollTo({
+                        top: Math.max(0, targetScroll),
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }
+
+        // Enhanced smooth scrolling with sidebar auto-scroll
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active state
+                        document.querySelectorAll('.sidebar a').forEach(a => {
+                            a.removeAttribute('aria-current');
+                        });
+                        this.setAttribute('aria-current', 'page');
+                        
+                        // Auto-scroll sidebar to show active link
+                        setTimeout(scrollToActiveSection, 100);
+                    }
+                }
+            });
+        });
+
+        // Sidebar scroll indicators
+        function updateScrollIndicators() {
+            const sidebarContent = document.getElementById('sidebarContent');
+            const scrollUpBtn = document.querySelector('.scroll-up');
+            const scrollDownBtn = document.querySelector('.scroll-down');
+            
+            if (!sidebarContent || !scrollUpBtn || !scrollDownBtn) return;
+            
+            const scrollTop = sidebarContent.scrollTop;
+            const maxScroll = sidebarContent.scrollHeight - sidebarContent.clientHeight;
+            
+            // Update button states
+            scrollUpBtn.style.opacity = scrollTop <= 0 ? '0.3' : '1';
+            scrollDownBtn.style.opacity = scrollTop >= maxScroll ? '0.3' : '1';
+        }
+
+        // Add scroll event listener to update indicators
+        document.getElementById('sidebarContent')?.addEventListener('scroll', updateScrollIndicators);
+        
+        // Initial call to set button states
+        setTimeout(updateScrollIndicators, 100);
+
+        // Define sections for navigation
+        const navigationSections = [
+            { id: 'introduction', title: 'Introduction' },
+            { id: 'syntax', title: 'HTML Syntax' },
+            { id: 'concepts', title: 'Core Concepts' },
+            { id: 'roadmap', title: 'Learning Roadmap' },
+            { id: 'examples', title: 'HTML Topics & Examples' },
+            { id: 'basic-text-elements', title: 'Basic Text Elements' },
+            { id: 'lists', title: 'Lists' },
+            { id: 'links-images', title: 'Links and Images' },
+            { id: 'form-elements', title: 'Form Elements' },
+            { id: 'tables', title: 'Tables' },
+            { id: 'semantic-elements', title: 'Semantic Elements' },
+            { id: 'media-elements', title: 'Media Elements' },
+            { id: 'canvas-svg', title: 'Canvas and SVG' },
+            { id: 'meta-tags', title: 'Meta Tags' },
+            { id: 'input-types', title: 'Input Types' },
+            { id: 'form-validation', title: 'Form Validation' },
+            { id: 'data-attributes', title: 'Data Attributes' },
+            { id: 'global-attributes', title: 'Global Attributes' },
+            { id: 'iframe-embed', title: 'Iframe and Embed' },
+            { id: 'interactive-elements', title: 'Interactive Elements' },
+            { id: 'mistakes', title: 'Common Mistakes' },
+            { id: 'quiz', title: 'Mini Quiz' }
+        ];
+
+        // Get current section index
+        function getCurrentSectionIndex() {
+            const currentSection = document.querySelector('.sidebar a[aria-current="page"]');
+            if (!currentSection) return 0;
+            
+            const currentId = currentSection.getAttribute('href').substring(1);
+            return navigationSections.findIndex(section => section.id === currentId);
+        }
+
+        // Navigate to previous section
+        function navigateToPreviousSection() {
+            const currentIndex = getCurrentSectionIndex();
+            const previousIndex = Math.max(0, currentIndex - 1);
+            const previousSection = navigationSections[previousIndex];
+            
+            if (previousSection) {
+                const target = document.getElementById(previousSection.id);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update active state
+                    document.querySelectorAll('.sidebar a').forEach(a => {
+                        a.removeAttribute('aria-current');
+                    });
+                    
+                    const sidebarLink = document.querySelector(`.sidebar a[href="#${previousSection.id}"]`);
+                    if (sidebarLink) {
+                        sidebarLink.setAttribute('aria-current', 'page');
+                        setTimeout(scrollToActiveSection, 100);
+                    }
+                }
+            }
+        }
+
+        // Navigate to next section
+        function navigateToNextSection() {
+            const currentIndex = getCurrentSectionIndex();
+            const nextIndex = Math.min(navigationSections.length - 1, currentIndex + 1);
+            const nextSection = navigationSections[nextIndex];
+            
+            if (nextSection) {
+                const target = document.getElementById(nextSection.id);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update active state
+                    document.querySelectorAll('.sidebar a').forEach(a => {
+                        a.removeAttribute('aria-current');
+                    });
+                    
+                    const sidebarLink = document.querySelector(`.sidebar a[href="#${nextSection.id}"]`);
+                    if (sidebarLink) {
+                        sidebarLink.setAttribute('aria-current', 'page');
+                        setTimeout(scrollToActiveSection, 100);
+                    }
+                }
+            }
+        }
+
+        // Quiz functionality
+        function checkAllAnswers() {
+            const questions = document.querySelectorAll('.quiz-question');
+            let correctCount = 0;
+            const totalQuestions = questions.length;
+            
+            questions.forEach((question, index) => {
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                const feedback = question.querySelector('.quiz-feedback');
+                const correctAnswer = feedback.dataset.answer;
+                
+                // Clear previous feedback
+                feedback.style.display = 'none';
+                feedback.classList.remove('correct', 'incorrect');
+                
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswer) {
+                        feedback.classList.add('correct');
+                        feedback.innerHTML = `<strong>✓ Correct!</strong> ${feedback.dataset.explanation}`;
+                        correctCount++;
+                    } else {
+                        feedback.classList.add('incorrect');
+                        feedback.innerHTML = `<strong>✗ Incorrect.</strong> ${feedback.dataset.explanation}`;
+                    }
+                } else {
+                    feedback.classList.add('incorrect');
+                    feedback.innerHTML = `<strong>✗ Not answered.</strong> ${feedback.dataset.explanation}`;
+                }
+                
+                feedback.style.display = 'block';
+            });
+            
+            // Show results
+            showQuizResults(correctCount, totalQuestions);
+        }
+
+        function showQuizResults(correctCount, totalQuestions) {
+            const resultsContainer = document.getElementById('quizResults');
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            const scoreMessage = document.getElementById('scoreMessage');
+            
+            const percentage = Math.round((correctCount / totalQuestions) * 100);
+            
+            scoreDisplay.textContent = `${correctCount}/${totalQuestions} (${percentage}%)`;
+            
+            let message = '';
+            if (percentage === 100) {
+                message = '🎉 Perfect! You\'re an HTML master! You\'ve demonstrated excellent knowledge of HTML concepts and best practices.';
+            } else if (percentage >= 80) {
+                message = '🌟 Excellent work! You have a strong understanding of HTML. Review the few questions you missed to solidify your knowledge.';
+            } else if (percentage >= 60) {
+                message = '👍 Good effort! You have a decent grasp of HTML basics. Consider reviewing the topics where you struggled to improve your understanding.';
+            } else if (percentage >= 40) {
+                message = '📚 Keep learning! You\'re on the right track but need more practice with HTML fundamentals. Review the examples and try again.';
+            } else {
+                message = '💪 Don\'t give up! HTML can be tricky at first. Go through the tutorial sections more carefully and retake the quiz.';
+            }
+            
+            scoreMessage.textContent = message;
+            resultsContainer.style.display = 'block';
+            
+            // Scroll to results
+            resultsContainer.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+
+        function resetQuiz() {
+            // Clear all radio buttons
+            document.querySelectorAll('.quiz-question input[type="radio"]').forEach(radio => {
+                radio.checked = false;
+            });
+            
+            // Hide all feedback
+            document.querySelectorAll('.quiz-feedback').forEach(feedback => {
+                feedback.style.display = 'none';
+                feedback.classList.remove('correct', 'incorrect');
+            });
+            
+            // Hide results
+            document.getElementById('quizResults').style.display = 'none';
+            
+            // Scroll to top of quiz
+            document.getElementById('quiz').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Add keyboard navigation for quiz
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'Enter') {
+                const quizSection = document.getElementById('quiz');
+                if (quizSection) {
+                    const rect = quizSection.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                        checkAllAnswers();
+                    }
+                }
+            }
+        });
+    </script>
+    
     <script src="assets/js/main.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
